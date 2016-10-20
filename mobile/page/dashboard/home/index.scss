@@ -1,0 +1,196 @@
+@import "../../../hotcss/px2rem.scss";
+@import "../../../common/css/common.scss";
+@import "../../../common/css/base.scss";
+@import "../../../common/components/zepto-modals/modals.scss";
+@import "../../../common/components/infinite-scroll/infinite-scroll.scss";
+@import "../../../common/css/no-result.scss";
+@import "alpha-icon/icon.css";
+@import "../../../common/components/go-top/index.scss";
+
+.eh-dashborad-index {
+    height: px2rem(201);
+    background: url(../../../images/index-banner.png);
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: px2rem(32);
+    .eh-dashborad-index-userphoto {
+        width: px2rem(101);
+        height: px2rem(101);
+        border: 1px solid #fff;
+        background: #e0e0e0;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        line-height: px2rem(101);
+        font-size: px2rem(36);
+        img
+        {
+            width: 100%;
+        }
+    }
+    .eh-dashborad-index-username {
+        font-size: px2rem(18);
+        line-height: px2rem(22);
+        color: #333333;
+        text-align: center;
+        margin-top: px2rem(8);
+        height: px2rem(22);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left: px2rem(2);
+        padding-right: px2rem(2);
+    }
+    .eh-dashborad-index-userposition {
+        font-size: px2rem(13);
+        line-height: px2rem(17);
+        color: #666666;
+        margin-top: px2rem(4);
+    }
+}
+
+.eh-dashborad-index-nav {
+    height: px2rem(88);
+    background: #fff;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+    .eh-dashborad-index-nav-item {
+        display: block;
+        width: 25%;
+        float: left;
+        text-align: center;
+        position: relative;
+        padding-top: px2rem(22);
+        color: #666666;
+        .heart-icon {
+            display: inline-block;
+            width: px2rem(16);
+            height: px2rem(16);
+            background: url(../../../images/heart.png) no-repeat 0 0;
+            background-size: 100% 100%;
+            margin-top: px2rem(6);
+        }
+        .ui2-icon-bussinesscard {
+            font-size: px2rem(16);
+        }
+        .ui2-icon-comment {
+            font-size: px2rem(22);
+            position: relative;
+            top: px2rem(3);
+        }
+        .ui2-icon-calendar {
+            font-size: px2rem(22);
+            position: relative;
+            top: px2rem(3);
+        }
+        .count-box {
+            background: #FF7300;
+            position: absolute;
+            right: px2rem(20);
+            top: px2rem(16);
+            border-radius: px2rem(10);
+            padding-left: px2rem(5);
+            padding-right: px2rem(5);
+            font-size: px2rem(10);
+            line-height: px2rem(22);
+            color: #fff;
+            text-align: center;
+        }
+        .eh-nav-name {
+            font-size: px2rem(13);
+            line-height: px2rem(17);
+            color: #666666;
+            margin-top: px2rem(3);
+        }
+    }
+}
+
+.eh-dashborad-exhibition-list {
+    .exhibition-list-title {
+        width: px2rem(355);
+        margin: 0 auto;
+        font-size: px2rem(15);
+        line-height: px2rem(17);
+        color: #666666;
+        padding-top: px2rem(15);
+        margin-bottom: px2rem(9);
+    }
+    .exhibition-list-item {
+        width: px2rem(355);
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid #cccccc;
+        border-radius: px2rem(5);
+        padding-bottom: px2rem(8);
+        margin-bottom: px2rem(8);
+        .exhibiton-name {
+            font-size: px2rem(20);
+            line-height: px2rem(24);
+            color: #333333;
+            max-height: px2rem(48);
+            overflow: hidden;
+            margin: px2rem(19) px2rem(20) px2rem(12) px2rem(20);
+        }
+        .exhibition-exhibitor-count,
+        .exhibition-location {
+            font-size: px2rem(13);
+            line-height: px2rem(18);
+            color: #666666;
+            margin-left: px2rem(20);
+            margin-bottom: px2rem(10);
+            .ui2-icon-map {
+                font-size: px2rem(13);
+            }
+        }
+        .exhibition-exhibitor-count {
+            height: px2rem(16);
+            overflow: hidden;
+            .ui2-icon-account {
+                font-size: px2rem(13);
+            }
+        }
+        .exhibition-time {
+            font-size: px2rem(12);
+            line-height: px2rem(16);
+            color: #999999;
+            text-align: right;
+            margin-right: px2rem(16);
+            .exhibiton-isExpired-box {
+                display: inline-block;
+                width: px2rem(100);
+                height: px2rem(14);
+                position: relative;
+                background: #EEEEEE;
+                font-size: px2rem(10);
+                line-height: px2rem(14);
+                margin-left: px2rem(6);
+                top: px2rem(-2);
+                text-align: center;
+                .arrow {
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-top: px2rem(4) solid transparent;
+                    border-right: px2rem(8) solid #EEEEEE;
+                    border-bottom: px2rem(4) solid transparent;
+                    position: absolute;
+                    left: px2rem(-7);
+                    top: px2rem(4);
+                }
+            }
+        }
+    }
+}
+
+.exhibition-list-view-more {
+    width: px2rem(355);
+    height: px2rem(40);
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #cccccc;
+    text-align: center;
+    line-height: px2rem(40);
+    color: #666666;
+    margin-bottom: px2rem(10);
+    font-size: px2rem(14);
+}

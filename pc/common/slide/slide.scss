@@ -1,0 +1,109 @@
+$headerHeight: 84px;
+
+// 左边和右边翻页按钮公共样式
+.eh-nav-left-right {
+    width: 30px;
+    background: #373838 no-repeat center center;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+
+.eh-slide {
+    display: table;
+    width: 100%;
+    height: $headerHeight;
+    overflow-x: hidden;
+
+    .eh-slide-three {
+        display: table-cell;
+        background-color: $bgColor;
+        position: relative;
+
+        &.eh-slide-container {
+            // border-top: solid 1px #D1D1D1;
+            // overflow: hidden;
+        }
+
+        .eh-slide-item {
+            display: inline-block;
+        }
+
+        &.eh-slide-left {
+            @extend .eh-nav-left-right;
+            background-image: url(/pc/images/turn-left-able.png);
+
+            &.disabled {
+                background-image: url(/pc/images/turn-left-disable.png);
+            }
+
+        }
+
+        &.eh-slide-right {
+            @extend .eh-nav-left-right;
+            background-image: url(/pc/images/turn-right-able.png);
+
+            &.disabled {
+                background-image: url(/pc/images/turn-right-disable.png);
+            }
+
+        }
+
+    }
+
+    // 中间内容部分
+    .eh-slide-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $headerHeight;
+        font-size: 0;
+        visibility: hidden;
+        z-index: 1;
+
+        .eh-slide-list-item {
+            display: inline-block;
+            height: $headerHeight;
+            vertical-align: top;
+            padding: 0;
+            cursor: pointer;
+
+            .eh-slide-list-item-inner {
+                width: 100%;
+                height: $headerHeight;
+                font-size: 12px;
+                border-right: solid 1px #EDEDED;
+                position: relative;
+                overflow: visible;
+            }
+
+            .eh-arrow-helper {
+                display: none;
+                width: 25px;
+                height: 10px;
+                background: url(/pc/images/arrow-down-blue.png) no-repeat center center;
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                margin-left: -13px;
+            }
+
+            .eh-slide-item-inner {
+                overflow: hidden;
+            }
+
+            &.active {
+                background: #3E64B2;
+                color: #fff;
+
+                .eh-arrow-helper {
+                    display: block;
+                }
+
+            }
+
+        }
+
+    }
+
+}

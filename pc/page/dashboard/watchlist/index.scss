@@ -1,0 +1,480 @@
+@import "../../../common/css/common.scss";
+@import "../../../common/css/backend.scss";
+@import "scc-bp-message-tip/message-tip.css";
+@import "alpha-pagination/pagination.css";
+$marginWidth: 9px;
+$rightImgWidth: 360px;
+$leftImgWidth: 200px;
+$rightImgHeight: 250px;
+
+.eh-page * {
+    color: $fontColor;
+}
+
+.eh-dsn {
+    display: none !important;
+}
+
+.eh-gap-line {
+    border: none;
+    border-bottom: dashed 1px $dottedBorderColor;
+}
+
+.eh-dashboard {
+    display: table;
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+}
+
+.eh-middle-side {
+    display: table-cell;
+
+    .eh-right-side-content {
+        overflow: hidden;
+    }
+
+}
+
+.eh-content-inner {
+    min-height: 300px;
+    margin: 25px 65px;
+
+    // 标题头部分
+    .eh-result-proption {
+        .eh-search-number {
+            font-size: 46px;
+            vertical-align: middle;
+        }
+
+        .eh-result-name {
+            font-size: 22px;
+        }
+
+    }
+
+    // 搜索列表部分
+    .eh-content-list {
+        width: 100%;
+        position: relative;
+        top: -20px;
+    }
+
+    .eh-list-item {
+        cursor: pointer;
+        margin-top: 16px;
+        border: solid 1px $borderColor;
+        background: #fff;
+        height: $rightImgHeight;
+        overflow: hidden;
+
+        &:hover {
+            box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.13);
+            border-bottom: 1px solid #fff;
+
+            .eh-list-item-header {
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+    .eh-list-item-sub {
+        display: table;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .eh-sub-left {
+        display: table-cell;
+        padding: 30px 20px 30px 20px;
+        border: none;
+        border-right: #E0E0E0 solid 1px;
+        position: relative;
+
+        .eh-collection-btn {
+            position: absolute;
+            top: 17px;
+            right: 15px;
+            display: block;
+            width: 22px;
+            height: 19px;
+            background: url(../../../images/css-sprite.png) 0 0 no-repeat;
+
+            &.active {
+                background-position: 0 -22px;
+            }
+
+        }
+
+        // 公司头
+        .eh-list-item-header {
+            display: block;
+            cursor: pointer;
+            max-height: 48px;
+            overflow: hidden;
+
+            &:hover {
+                text-decoration: underline;
+                color: #333;
+            }
+
+            .eh-company-name,
+            .eh-company-category {
+                font-size: $fontSize18;
+            }
+
+        }
+
+        .eh-company-info {
+            list-style-type: none;
+
+            * {
+                color: #666666;
+            }
+
+            .eh-company-info-item {
+                margin-top: 10px;
+
+                &:last-child {
+                    margin-top: 25px;
+                }
+            }
+
+            .eh-info-item-right {
+                font-size: $fontSize14;
+                vertical-align: middle;
+                display: inline-block;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 320px;
+            }
+
+            .eh-info-item-right.eh-location {
+                // display: inline-block;
+                // padding-left: 15px;
+                // height: 16px;
+                // line-height: 16px;
+                // background: url(../../../images/location-marker.png) no-repeat left top;
+            }
+
+            .eh-connect {
+                display: inline-block;
+                padding-left: 19px;
+                height: 16px;
+                line-height: 16px;
+                background: url(../../../images/connect-marker.png) no-repeat left top;
+            }
+
+            .eh-history-ehibition {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                margin-right: 5px;
+                margin-top: 0;
+                background: no-repeat center center;
+                background-size: 100% 100%;
+            }
+
+        }
+
+    }
+
+    .eh-sub-right {
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+        width: $rightImgWidth;
+        font-size: 0;
+        height: $rightImgHeight;
+
+        .eh-product-img-left {
+            border-right: $borderColor solid 1px;
+            display: table-cell;
+            width: $leftImgWidth;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .eh-product-img-right {
+            display: table-cell;
+            width: $rightImgWidth - $leftImgWidth -1;
+            height: $rightImgHeight;
+            vertical-align: top;
+
+            .eh-product-small {
+                height: 50%;
+            }
+
+            .eh-product-small:first-child {
+                border-bottom: $borderColor solid 1px;
+            }
+
+        }
+
+    }
+
+}
+
+// 底部分页栏
+.eh-pagination {
+    margin-top: 28px;
+}
+
+// 左侧过滤状态部分
+.eh-filtered-status {
+    display: none;
+    border-radius: 18px;
+    height: 25px;
+    line-height: 25px;
+    border: solid 1px $borderColor;
+    position: relative;
+    margin: 17px 20px 0 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+
+    // 关闭按钮
+    .eh-close-filetred {
+        position: absolute;
+        top: 50%;
+        right: 3px;
+        margin-top: -9px;
+        display: block;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        background: url(../../../images/filter-close.png) no-repeat center center;
+    }
+
+    .eh-selected-content {
+        margin-left: 10px;
+    }
+
+}
+
+.eh-content-show,
+.eh-no-content-show {
+    display: none;
+    // margin: 30px 50px;
+}
+
+.eh-no-content-show {
+    margin-top: 83px;
+}
+
+.eh-no-result {
+    text-align: center;
+
+    .eh-no-result-left {
+        display: inline-block;
+        width: 222px;
+        height: 222px;
+        vertical-align: middle;
+        background: url(../../../images/no-result.png) no-repeat center center;
+    }
+
+    .eh-no-result-right {
+        display: inline-block;
+        height: 222px;
+        line-height: 222px;
+        font-size: $fontSize22;
+        margin-left: 32px;
+    }
+
+    @media (max-width:1155px) {
+        .eh-no-result-right {
+            height: 100px;
+            line-height: 100px;
+        }
+
+    }
+
+}
+
+.eh-no-result-gap {
+    margin-top: 65px;
+    height: 0;
+    border-top: solid 1px #999;
+    text-align: center;
+
+    .eh-middle-gap-content {
+        display: inline-block;
+        padding: 0 17px;
+        background: $bgColor;
+        font-size: $fontSize24;
+        position: relative;
+        height: 24px;
+        line-height: 24px;
+        top: -9px;
+        color: $lightFontColor;
+    }
+
+}
+
+.eh-recommend-list {
+    margin: 45px 0;
+    font-size: 0;
+    display: table;
+
+    .eh-recommend-item {
+        position: relative;
+        display: table-cell;
+        width: 33.33%;
+        height: 100%;
+        font-size: $fontSize14;
+        overflow: hidden;
+        vertical-align: top;
+
+        .eh-recommend-item-inner {
+            border: solid 1px #E0E0E0;
+            vertical-align: top;
+            margin: 0 $marginWidth;
+        }
+
+    }
+
+    .eh-recommend-item.eh-recommend-item-first .eh-recommend-item-inner {
+        margin-right: $marginWidth;
+        margin-left: 0;
+    }
+
+    .eh-recommend-item.eh-recommend-item-last .eh-recommend-item-inner {
+        margin-right: 0;
+        margin-left: $marginWidth;
+    }
+
+    .eh-recommend-up {
+        margin: 25px 26px 15px;
+
+        .eh-item-date {
+            font-size: $fontSize12;
+            color: $lightFontColor;
+        }
+
+        .eh-item-title {
+            font-size: $fontSize20;
+            color: $lightFontColor;
+            margin-top: 10px;
+            height: 53px;
+            overflow: hidden;
+        }
+
+        .eh-item-gap {
+            display: block;
+            border: none;
+            border-bottom: solid 1px #9F9F9F;
+            width: 85px;
+            margin-top: 10px;
+        }
+
+        .eh-item-category {
+            margin-top: 16px;
+            height: 48px;
+            overflow: hidden;
+        }
+
+        .eh-item-location {
+            margin-top: 0;
+            display: table;
+            height: 31px;
+            overflow: hidden;
+            width: 100%;
+
+            .eh-location-marker {
+                display: table-cell;
+                width: 13px;
+                height: 16px;
+                background: url(../../../images/location-marker.png) no-repeat left center;
+            }
+
+            .eh-location-name {
+                display: table-cell;
+                padding-left: 5px;
+                height: 100%;
+                line-height: 100%;
+                vertical-align: middle;
+            }
+
+        }
+
+        .eh-item-info {
+            margin-top: 20px;
+            height: 82px;
+            overflow: hidden;
+        }
+
+    }
+
+    .eh-recommend-down {
+        margin-top: 0;
+        width: 100%;
+        height: 207px;
+        background: url(../../../images/eh-building.png) no-repeat center center;
+    }
+
+}
+
+.eh-right-two-pics-item {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: $rightImgWidth / 2;
+    height: $rightImgHeight;
+
+    &.eh-right-two-pics-border {
+        border-right: solid 1px $dottedBorderColor;
+    }
+
+    .eh-product-img-two {
+        width: 160px;
+    }
+
+}
+
+.eh-three-pics-first {
+    max-width: 160px;
+    max-height: $rightImgHeight;
+}
+
+.eh-three-pics-second,
+.eh-three-pics-third {
+    max-width: 160px;
+    max-height: $rightImgHeight / 2;
+}
+
+.ui2-loading-mask {
+    background: $bgColor;
+}
+
+.eh-right-product-img {
+    width: 320px;
+    max-height: $rightImgHeight;
+}
+
+.eh-company-name em {
+    color: $orangeColor;
+}
+
+.eh-conneted-item {
+    position: absolute;
+    bottom: 15px;
+    right: 12px;
+    display: none;
+
+    .eh-connect {
+        display: inline-block;
+        padding-left: 19px;
+        height: 16px;
+        line-height: 16px;
+        background: url(../../../images/connect-marker.png) no-repeat left top;
+    }
+
+}
+
+.eh-info-item-left {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    color: #999;
+}

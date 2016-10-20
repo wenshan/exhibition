@@ -1,0 +1,497 @@
+@import "alpha-icon/icon-flag-s.css";
+@import "alpha-icon/icon.css";
+@import "alpha-balloon/balloon.css";
+@import "alpha-pagination/pagination.css";
+@import "alpha-loading-panel/loading-panel.css";
+@import "scc-bp-message-tip/message-tip.css";
+@import "scc-bp-ajax/ajax.css";
+@import "../../../common/css/common.scss";
+@import "../../../common/css/backend.scss";
+@import "../inform/index.scss";
+
+/*通用类定义*/
+
+.custm-empty-bg {
+    background-image: url(../../../images/custm-empty-icon.png);
+}
+
+.eh-custmanage {
+    width: 100%;
+    position: relative;
+    color: $fontColor;
+    display: table;
+}
+
+body {
+    background-color: $bgColor;
+}
+
+.eh-custm-wrap {
+    margin: 35px 20px 20px 20px;
+    background-color: #fff;
+    border: 1px solid $borderColor;
+    min-width: 834px;
+    .eh-custm-wrap-title {
+        height: 44px;
+        padding-left: 18px;
+        line-height: 44px;
+        color: #797979;
+        font-size: 18px;
+        position: relative;
+        .eh-custm-count {
+            font-size: 14px;
+            color: #999999;
+            padding-left: 5px;
+        }
+    }
+}
+
+.eh-custm-pedding-application {
+    .eh-pedding-toggle {
+        width: 110px;
+        position: absolute;
+        top: 5px;
+        right: 3px;
+        z-index: 2;
+        .eh-pedding-toggle-item {
+            line-height: 35px;
+            padding-left: 20px;
+            background: #edf1f5;
+            display: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .eh-pedding-toggle-item:hover {
+            color: #28A1D8;
+        }
+        .eh-peddig-toggle-choosed {
+            display: block;
+            color: #28A1D8;
+            background: #fff;
+            background: url(../../../images/custm-pedding-toggle.png) 89px -14px no-repeat;
+        }
+    }
+    .eh-pedding-toggle:hover {
+        display: block;
+        border: 1px solid #dae2ed;
+        width: 108px;
+    }
+    .eh-pedding-toggle:hover .eh-pedding-toggle-item {
+        display: block;
+        line-height: 34px;
+        padding-left: 19px;
+    }
+    .eh-pedding-toggle:hover .eh-peddig-toggle-choosed {
+        background-position: 88px 14px;
+    }
+    .eh-pedding-people-wrap {
+        border-top: 2px solid #f0f0f0;
+        padding-top: 30px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        .eh-pedding-button-wrap {
+            width: 42px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 122px;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+            z-index: 2;
+            .eh-pedding-button-left-disabled {
+                background-position: -74px -43px;
+            }
+            .eh-pedding-button-right-disabled {
+                background-position: 0 -43px;
+            }
+        }
+        .eh-pedding-button-right-wrap {
+            right: 0;
+            left: auto;
+        }
+        .eh-pedding-button-right,
+        .eh-pedding-button-left {
+            display: inline-block;
+            width: 14px;
+            height: 26px;
+            background: url(../../../images/left-right-button.png) -74px 0 no-repeat;
+        }
+        .eh-pedding-button-right {
+            background-position: 0 0;
+        }
+        .eh-pedding-people-list-wrap {
+            height: 240px;
+            overflow: hidden;
+            margin-left: 29px;
+            margin-right: 29px;
+            position: relative;
+            z-index: 1;
+            .eh-pedding-people-list {
+                position: absolute;
+                height: 240px;
+                width: 100%;
+                left: 0;
+                top: 0;
+                overflow: hidden;
+            }
+            /*没有pendding的状态*/
+            .eh-nopedding-box {
+                width: 313px;
+                height: 80px;
+                font-size: 16px;
+                line-height: 18px;
+                margin: 0 auto;
+                margin-top: 38px;
+                .eh-nopedding-icon {
+                    display: inline-block;
+                    width: 64px;
+                    height: 80px;
+                    position: relative;
+                    top: 23px;
+                    margin-right: 28px;
+                    @extend .custm-empty-bg;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                }
+            }
+            /*没有pendding的状态*/
+            .eh-pedding-people-item {
+                width: 33%;
+                float: left;
+                text-align: center;
+                border-right: 1px solid #f8f8f8;
+                .eh-pedding-people-photo {
+                    display: inline-block;
+                    width: 82px;
+                    height: 82px;
+                    border-radius: 50%;
+                    border: 1px solid #E0E0E0;
+                    overflow: hidden;
+                    background: #D3D6DB;
+                    font-size: 38px;
+                    line-height: 82px;
+                    color: #707070;
+                    text-align: center;
+                    cursor: default;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .eh-pedding-people-photo:hover {
+                    text-decoration: none;
+                }
+                .eh-pedding-people-name {
+                    font-size: 18px;
+                    line-height: 22px;
+                    height: 22px;
+                    span
+                    {
+                        display: inline-block;
+                        //width: 330px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space:nowrap;
+                    }
+                }
+                .eh-pedding-country {
+                    font-size: 14px;
+                    color: #666666;
+                    line-height: 18px;
+                    padding-left: 4px;
+                    position: relative;
+                    top: -3px;
+                }
+                .eh-pedding-people-info-item {
+                    margin-bottom: 0;
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    .eh-pending-status {
+                        color: #999999;
+                    }
+                }
+                .eh-pedding-people-info-position {
+                    font-size: 14px;
+                    color: #28A1D8;
+                    line-height: 18px;
+                    padding-top: 8px;
+                    height: 36px;
+                    margin-bottom: 6px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                .eh-pedding-accept-btn {
+                    display: inline-block;
+                    width: 68px;
+                    height: 28px;
+                    background: #4569B4;
+                    line-height: 28px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                .eh-pedding-Ignore-btn {
+                    display: inline-block;
+                    width: 66px;
+                    height: 26px;
+                    background: none;
+                    border: 1px solid #d0d0d0;
+                    margin-left: 12px;
+                    line-height: 26px;
+                    color: #666666;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+            .eh-pedding-people-item:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+.eh-custm-myconnection {
+    margin-top: 0;
+    .eh-custm-mycon-list-wrap {
+        min-height: 200px;
+    }
+    .eh-custm-mycon-table {
+        display: table;
+        position: relative;
+        width: 100%;
+        .eh-custm-mycon-left,
+        .eh-custm-mycon-middle,
+        .eh-custm-mycon-right {
+            display: table-cell;
+            position: relative;
+            vertical-align: top;
+        }
+        .eh-custm-mycon-left {
+            width: 49%;
+        }
+        .eh-custm-mycon-middle {
+            width: 33%;
+        }
+        .eh-custm-mycon-right {
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    .eh-custm-mycon-head {
+        height: 32px;
+        background: #f9f9f9;
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+        line-height: 32px;
+        .eh-custm-mycon-left
+        {
+            text-align: left;
+            span
+            {
+                padding-left: 56px;
+            }
+        }
+    }
+    .eh-noconection-box {
+        width: 398px;
+        height: 200px;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 auto;
+        padding-top: 71px;
+        .eh-noconection-icon {
+            display: inline-block;
+            width: 79px;
+            height: 54px;
+            position: relative;
+            top: 18px;
+            margin-right: 28px;
+            @extend .custm-empty-bg;
+            background-position: -119px -14px;
+            background-repeat: no-repeat;
+        }
+    }
+    .eh-custm-one-people-box {
+        height: 200px;
+        overflow: hidden;
+        border-bottom: 1px solid #E0E0E0;
+        .eh-custm-people-photo {
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            border: 1px solid #E0E0E0;
+            overflow: hidden;
+            background: #D3D6DB;
+            margin-left: 56px;
+            margin-top: 33px;
+            float: left;
+            font-size: 38px;
+            line-height: 90px;
+            color: #707070;
+            cursor: default;
+            text-align: center;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+        .eh-custm-people-photo:hover {
+            text-decoration: none;
+        }
+        .eh-custm-mycon-info-box {
+            width: 57%;
+            margin-top: 33px;
+            padding-left: 21px;
+            float: left;
+            .eh-custm-mycon-info-item {
+                margin-bottom: 5px;
+            }
+            .eh-custm-mycon-name {
+                width: 228px;
+                font-size: 24px;
+                color: #333333;
+                line-height: 26px;
+                height: 26px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space:nowrap;
+            }
+            .eh-custm-mycon-position {
+                font-size: 16px;
+                line-height: 20px;
+                color: #666666;
+                margin-bottom: 12px;
+            }
+            .eh-custm-mycon-company {
+                font-size: 16px;
+                line-height: 20px;
+                color: #28A1D8;
+                max-height: 40px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .eh-custm-mycon-product {
+                font-size: 14px;
+                line-height: 18px;
+                color: #999999;
+                max-height: 36px;
+                overflow: hidden;
+            }
+        }
+        .eh-custm-mycon-notes {
+            width: 240px;
+            height: 102px;
+            margin: 0 auto;
+            margin-top: 33px;
+            padding-top: 20px;
+            border: 1px dashed #E0E0E0;
+            .eh-custm-mycon-remarks {
+                margin-bottom: 0;
+                height: 76px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .eh-custm-mycon-editbox {
+            text-align: right;
+            padding-right: 8px;
+            font-size: 14px;
+            color: #666666;
+            cursor: pointer;
+        }
+        .eh-custm-inform-button {
+            width: 94px;
+            height: 40px;
+            border: 1px solid #D0D0D0;
+            line-height: 40px;
+            text-align: center;
+            color: #363636;
+            font-size: 18px;
+            margin: 0 auto;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .eh-custm-inform-times {
+            text-align: center;
+            font-size: 14px;
+            line-height: 26px;
+            color: #999999;
+            margin-bottom: 0;
+        }
+        .eh-custm-mycon-addnotes {
+            margin-top: 30px;
+            color: #666666;
+            cursor: pointer;
+            text-align: center;
+        }
+        .eh-edit-remarks-action:hover {
+            color: #FF7300;
+            text-decoration: underline;
+        }
+        .eh-custm-mycon-editbox:hover,
+        .eh-custm-mycon-addnotes:hover {
+            color: #FF7300;
+        }
+        .eh-custm-mycon-edit-note-box {
+            width: 300px;
+            height: 137px;
+            margin: 0 auto;
+            margin-top: 20px;
+            border: 1px solid #E0E0E0;
+            text-align: center;
+            padding-top: 20px;
+            position: relative;
+            .remained-word-box {
+                position: absolute;
+                right: 20px;
+                top: 2px;
+                color: #ccc;
+            }
+            textarea {
+                width: 244px;
+                height: 80px;
+                border: 1px solid #00A0D7;
+                resize: none;
+                padding: 4px 8px;
+                font-size: 14px;
+                color: #333333;
+                line-height: 18px;
+            }
+            .eh-custm-mycon-editbox-btn-box {
+                padding-top: 10px;
+            }
+            .eh-custm-mycon-editbox-submit-btn {
+                display: inline-block;
+                width: 68px;
+                height: 24px;
+                background: #4569B4;
+                text-align: center;
+                line-height: 24px;
+                color: #fff;
+                cursor: pointer;
+            }
+            .eh-custm-mycon-editbox-cancel-btn {
+                display: inline-block;
+                width: 66px;
+                height: 22px;
+                border: 1px solid #D0D0D0;
+                line-height: 22px;
+                text-align: center;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+        }
+    }
+    .pagination-box {
+        height: 39px;
+        padding-top: 17px;
+    }
+}

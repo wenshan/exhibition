@@ -1,0 +1,265 @@
+@import "alpha-animation/animate.css";
+
+.icon-close {
+    width: px2rem(20);
+    height: px2rem(20);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1qDueMXXXXXaRXpXXXXXXXXXX-20-20.png") center no-repeat;
+    background-size: 100%;
+}
+
+.icon-user01 {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1AdOaMXXXXXc9XpXXXXXXXXXX-26-25.png") center no-repeat;
+    background-size: 100%;
+}
+
+.icon-user02 {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1ininMXXXXXc6XXXXXXXXXXXX-28-20.png") center no-repeat;
+    background-size: 100%;
+}
+
+.icon-user03 {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1b3d8MXXXXXXiXVXXXXXXXXXX-24-23.png") center no-repeat;
+    background-size: 100%;
+}
+
+.icon-user04 {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1fmdYMXXXXXX8aXXXXXXXXXXX-24-21.png") center no-repeat;
+    background-size: 100%;
+}
+
+.icon-user05 {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1pPNYMXXXXXbLaXXXXXXXXXXX-24-23.png") center no-repeat;
+    background-size: 100%;
+}
+
+.icon-user06 {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1cW5XMXXXXXXAXFXXXXXXXXXX-28-28.png") center no-repeat;
+    background-size: 100%;
+}
+.icon-mypage {
+    width: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    background: url("https://img.alicdn.com/tps/TB1A6W1MXXXXXbKXXXXXXXXXXXX-24-25.png") center no-repeat;
+    background-size: 95%;
+}
+
+.sile-menu {
+    height: 100%;
+    overflow: auto;
+    background: #2A2A2A;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+
+.sile-menu label {
+    padding-left: px2rem(20);
+}
+
+.sile-menu .log-out {
+    line-height: px2rem(24);
+    text-align: center;
+    font-size: px2rem(16);
+}
+
+.sile-menu .log-out a {
+    color: #999;
+    display: block;
+    border: 1px solid #666;
+    width: px2rem(150);
+    margin:px2rem(10) auto;
+    -moz-border-radius:0.2rem;
+    -webkit-border-radius:0.2rem;
+    border-radius:0.2rem;
+}
+
+.sile-menu .close {
+    width: px2rem(20);
+    height: px2rem(20);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    margin: px2rem(10);
+    background: url(https://img.alicdn.com/tps/TB1qDueMXXXXXaRXpXXXXXXXXXX-20-20.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.sile-menu .close .icon-close {
+    display: none
+}
+
+.sile-menu .user-info {
+    width: px2rem(180);
+    padding: 0;
+    margin: px2rem(10) auto;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+.sile-menu .user-info .user-photo {
+    width: px2rem(100);
+    height: px2rem(100);
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 0;
+    margin: px2rem(10) auto;
+}
+
+.sile-menu .user-info .user-photo {
+    height: px2rem(100);
+    background: url("//sc01.alicdn.com/kf/HTB1GRfYJVXXXXbgXFXXq6xXFXXXF.jpg") top no-repeat;
+    overflow: hidden;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.sile-menu .user-name {
+    text-align: left;
+    width:px2rem(130);
+    font-size: px2rem(16);
+    line-height: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sile-menu .user-info .user-name a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+.sile-menu .user-info .user-zhiwei {
+    font-size: px2rem(16);
+    line-height: px2rem(28);
+    color: #fff;
+    text-align: center;
+    height: px2rem(28);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sile-menu .user-info .user-photo a {
+    display: block;
+    text-decoration: none;
+}
+
+.sile-menu .muen-box {
+    overflow: hidden;
+
+}
+.sile-menu .muen-box.linem{
+    border-bottom: solid 1px #666;
+}
+.sile-menu .muen-box ul{
+    padding:0;
+    margin:0 0 px2rem(10) 0;
+}
+.sile-menu .muen-box ul {
+    overflow: hidden;
+}
+
+.sile-menu .muen-box ul li {
+    overflow: hidden;
+    line-height: px2rem(48);
+    padding-left:px2rem(20);
+}
+.sile-menu .muen-box ul li:hover{
+    background: #666;
+}
+.sile-menu .muen-box ul li.current{
+    border-top: px2rem(2) solid #404040;
+    border-bottom: px2rem(2) solid #404040;
+}
+.sile-menu .muen-box a {
+    color: #fff;
+    font-size: px2rem(16);
+    padding-left: px2rem(20);
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+
+.sile-menu .tips-action {
+    width: px2rem(180);
+    height: px2rem(38);
+    color: #fff;
+    font-size: px2rem(16);
+    padding-left:px2rem(10);
+    padding-top:px2rem(5);
+}
+
+.sile-menu .tips-action a {
+    color: #fff;
+}
+
+.sile-menu .tips-action .signin {
+    float: left;
+    text-align: left;
+    font-size: px2rem(16);
+    line-height: px2rem(28);
+    height: px2rem(28);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sile-menu .tips-action .close {
+    float: right;
+}
+
+.sile-menu .tips-action .close a {
+    display: block;
+    width: px2rem(20);
+    height: px2rem(20);
+    font-size: px2rem(18);
+    text-decoration: none;
+}
+
+.sile-menu .tips-action .close a:hover {
+    text-decoration: none;
+}
+
+.eh-account-masker {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a7a7a7;
+    opacity: 0.6;
+    z-index: 100;
+}

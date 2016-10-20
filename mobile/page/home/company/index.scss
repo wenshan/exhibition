@@ -1,0 +1,510 @@
+@import "../../../hotcss/px2rem.scss";
+@import "../../../common/css/common.scss";
+@import "../../../common/css/base.scss";
+@import "../../../common/components/zepto-modals/modals.scss";
+@import "../../dashboard/inform/index.scss";
+@import "../../../common/components/go-top/index.scss";
+
+.eh-page {
+    padding: 0;
+    margin: 0;
+}
+
+// 头部
+.eh-company-header {
+    height: px2rem(200);
+    background: url("//img.alicdn.com/tps/TB1k_deMXXXXXXZXpXXXXXXXXXX-375-212.png") no-repeat top left;
+    background-size: 100%;
+    margin-top: 0;
+    position: relative;
+
+    .eh-middle-info {
+        margin-top: px2rem(40);
+        text-align: center;
+        color: #fff;
+
+        .eh-company-title {
+            @extend .eh-two-lines;
+            font-size: px2rem(16);
+        }
+
+        .eh-company-location {
+            font-size: px2rem(12);
+            margin-top: px2rem(3);
+        }
+
+    }
+
+    .eh-bottom-toggle {
+        background: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        color: #fff;
+        margin-bottom: 0;
+        padding: px2rem(10) 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .eh-operate-item {
+            display: inline-block;
+            width: 50%;
+            height: px2rem(29);
+            line-height: px2rem(29);
+            font-size: px2rem(14);
+
+            &.eh-first {
+                border-right: solid 1px #ddd;
+            }
+
+        }
+
+    }
+
+}
+
+// overview
+.eh-overview {
+    background: #fff;
+    padding-top: px2rem(17);
+
+    .eh-fino-detail {
+        display: -webkit-box;
+        color: $fontColorLight;
+        font-size: px2rem(12);
+        text-align: center;
+        margin-top: px2rem(10);
+        padding: 0 px2rem(25);
+        @extend .eh-two-lines;
+        -webkit-line-clamp: 10;
+    }
+
+    .eh-category {
+        margin-top: px2rem(17);
+
+        .eh-category-list {
+            list-style-type: none;
+            margin: 0 0 px2rem(5);
+
+            .eh-category-item {
+                display: inline-block;
+                width: 32%;
+                text-align: center;
+                position: relative;
+
+                .eh-category-item-inner {
+                    display: inline-block;
+                    width: px2rem(70);
+                    height: px2rem(70);
+                    background: no-repeat center center;
+                    background-size: 100%;
+
+                    &.eh-products {
+                        background-image: url("//img.alicdn.com/tps/TB1lFh8MXXXXXX_XVXXXXXXXXXX-70-70.png");
+                    }
+
+                    &.eh-brand {
+                        background-image: url("//img.alicdn.com/tps/TB1xIpdMXXXXXbQXpXXXXXXXXXX-70-70.png");
+                    }
+
+                    &.eh-industry {
+                        background-image: url("//img.alicdn.com/tps/TB1F0FkMXXXXXbJXXXXXXXXXXXX-70-70.png");
+                    }
+
+                }
+
+                .eh-text {
+                    font-size: px2rem(12);
+                    color: $fontColorLight;
+                }
+
+                .eh-arrow-up {
+                    display: none;
+                    background-size: 100%;
+                    position: absolute;
+                    bottom: px2rem(-15);
+                    left: 50%;
+                    margin-left: px2rem(-30/2);
+                    border-color: transparent transparent #F9F9F9 transparent;
+                    border-style: solid;
+                    border-width: 30px;
+                    width: 0;
+                    height: 0;
+                }
+
+                &.active {
+                    .eh-text {
+                        color: #F5BE2A;
+                    }
+
+                    .eh-arrow-up {
+                        display: block;
+                    }
+
+                    .eh-products {
+                        background-image: url("./images/product-hover.png");
+                    }
+
+                    .eh-brand {
+                        background-image: url("./images/brand-hover.png");
+                    }
+
+                    .eh-industry {
+                        background-image: url("./images/industry-hover.png");
+                    }
+
+                }
+
+            }
+
+        }
+
+        .eh-category-detail {
+            display: none;
+            padding: px2rem(27) px2rem(25);
+            background: #F9F9F9;
+            font-size: px2rem(12);
+            color: $fontColorLight;
+            word-break: break-word;
+
+            &.active {
+                display: block;
+                display: -webkit-box;
+            }
+
+        }
+
+    }
+
+}
+
+// gallery
+.eh-gallery {
+    background: #fff;
+    padding-top: px2rem(18);
+    padding-bottom: px2rem(18);
+
+    .eh-gallery-list-container {
+        overflow: hidden;
+        height: px2rem(140);
+    }
+
+    .eh-gallery-list {
+        margin-top: px2rem(15);
+        display: table;
+
+        .eh-gallery-item {
+            display: table-cell;
+            border: solid 1px #E7E7E7;
+            text-align: center;
+            margin: 0;
+            vertical-align: middle;
+            padding: px2rem(16);
+
+            .eh-gallery-item-inner {
+                width: px2rem(76);
+                height: px2rem(86);
+                background: url("//img.alicdn.com/tps/TB1K9.8LVXXXXX4XVXXXXXXXXXX-77-86.png") no-repeat center center;
+                background-size: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+// going
+.eh-going {
+    margin-top: px2rem(20);
+
+    .eh-going-list {
+        margin: px2rem(20) px2rem(8) 0;
+
+        .eh-going-item {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+
+            &:last-child {
+                .eh-line {
+                    display: none;
+                }
+
+            }
+
+        }
+
+        .eh-left {
+            position: absolute;
+            width: px2rem(40);
+            left: 0;
+            top: px2rem(30);
+            height: 100%;
+
+            .eh-photo {
+                width: px2rem(40);
+                height: px2rem(40);
+                border-radius: 50%;
+
+                image,
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 50%
+                }
+
+            }
+
+            .eh-line {
+                position: relative;
+                top: px2rem(13);
+                left: 50%;
+                border-left: solid 1px #B4B4B4;
+                height: 100%;
+            }
+
+        }
+
+        .eh-right {
+            margin-left: px2rem(50);
+            margin-bottom: px2rem(20);
+
+            .eh-footer-outer {
+                border: 0 none;
+                padding: 0;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                -moz-transition: box-shadow .5s;
+                -webkit-transition: box-shadow .5s;
+                transition: box-shadow .5s;
+                padding-top: px2rem(5);
+                padding-bottom: px2rem(18);
+            }
+
+            .eh-date {
+                font-size: px2rem(12);
+                color: $fontColorLight;
+            }
+
+            .eh-header-pic {
+                height: px2rem(140);
+                background: no-repeat center center;
+                background-size: 100% 100%;
+                position: relative;
+                margin: 0 px2rem(5);
+            }
+
+            .eh-title {
+                @extend .eh-two-lines;
+                font-size: px2rem(14);
+                font-weight: bold;
+                text-align: left;
+                margin: px2rem(10) px2rem(18) 0;
+                color: #333 !important;
+            }
+
+            .eh-location {
+                font-size: px2rem(12);
+                margin: px2rem(10) px2rem(18) 0;
+                color: $fontColorLight;
+            }
+
+            .eh-detail {
+                font-size: px2rem(12);
+                margin: px2rem(10) px2rem(18) 0;
+                @extend .eh-two-lines;
+                -webkit-line-clamp: 4;
+                color: #333 !important;
+            }
+
+        }
+
+    }
+
+}
+
+.eh-history {
+    margin-top: px2rem(20);
+
+    .eh-history-list {
+        margin-top: px2rem(10);
+    }
+
+    .eh-history-item {
+        position: relative;
+
+        .eh-left {
+            position: absolute;
+            left: px2rem(10);
+            top: px2rem(8);
+            height: 100%;
+
+            .eh-pic {
+                width: px2rem(40);
+                height: px2rem(40);
+                border-radius: 50%;
+                background: url("//img.alicdn.com/tps/TB1j_pcMXXXXXb6XpXXXXXXXXXX-40-40.png") no-repeat center center;
+                background-size: 100%;
+            }
+
+            .eh-line {
+                border-left: solid 1px #B4B4B4;
+                position: absolute;
+                left: 50%;
+                height: 100%;
+            }
+
+        }
+
+        &:last-child {
+            .eh-line {
+                display: none !important;
+            }
+
+        }
+
+        .eh-right {
+            position: relative;
+            margin-left: px2rem(63);
+            padding-bottom: px2rem(20);
+
+            .eh-arrow {
+                left: px2rem(-9);
+                top: px2rem(12);
+            }
+
+            .eh-right-inner {
+                display: block;
+                color: #333;
+                background: #fff;
+                margin-right: px2rem(10);
+                padding: px2rem(16) px2rem(16) px2rem(20);
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+                -moz-transition: box-shadow .5s;
+                -webkit-transition: box-shadow .5s;
+                transition: box-shadow .5s;
+            }
+
+            .eh-date {
+                color: $fontColorLight;
+                font-size: px2rem(12);
+            }
+
+            .eh-title {
+                display: -webkit-box;
+                color: $fontColorLight !important;
+                font-size: px2rem(14);
+                text-align: left;
+                margin-top: px2rem(10);
+            }
+
+        }
+
+    }
+
+}
+
+.eh-footer {
+    height: px2rem(60);
+    line-height: px2rem(60);
+    background: #F5BF2F;
+    margin-top: px2rem(50);
+    color: #fff;
+    position: relative;
+
+    .eh-people {
+        position: absolute;
+        left: 0;
+        width: px2rem(122);
+        height: px2rem(105);
+        background: url("//img.alicdn.com/tps/TB1baE9LVXXXXX1XVXXXXXXXXXX-122-105.png") center center no-repeat;
+        background-size: 100%;
+        top: px2rem(-44);
+    }
+
+    .eh-right {
+        margin-left: px2rem(125);
+        height: 100%;
+        overflow: hidden;
+
+        .eh-people-info {
+            display: inline-block;
+            width: 40%;
+            text-align: center;
+            vertical-align: middle;
+
+            .eh-name {
+                @extend .eh-dot-class;
+                margin: 0;
+                font-size: px2rem(16);
+                line-height: 1.1em;
+            }
+
+            .eh-position {
+                @extend .eh-dot-class;
+                margin: px2rem(7) 0;
+                font-size: px2rem(14);
+                line-height: 0.8em;
+            }
+
+        }
+
+        .eh-contact {
+            vertical-align: middle;
+            display: inline-block;
+            width: 60%;
+            text-align: center;
+            border-left: solid 1px #fff;
+            height: px2rem(30);
+            line-height: px2rem(30);
+            padding-left: px2rem(5);
+
+            .eh-connect {
+                border: solid 1px #fff;
+                color: #fff;
+                border-radius: px2rem(5);
+                padding: px2rem(5) px2rem(10);
+                font-size: px2rem(14);
+                position: relative;
+                top: px2rem(-2);
+            }
+
+        }
+
+    }
+
+}
+
+// 公共样式
+.eh-title {
+    text-align: center;
+    font-size: px2rem(14);
+}
+
+// 公共三角样式
+.eh-arrow {
+    border-width: px2rem(10);
+    border-left-width: 0 !important;
+    border-style: dashed;
+    border-right-style: solid;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    position: absolute;
+    left: px2rem(-14);
+    top: px2rem(13);
+    font-size: 0;
+    line-height: 0;
+    border-color: #fff;
+}
+
+.eh-connected-status {
+    font-size: px2rem(12);
+}
+
+.eh-waiting-status {
+    color: #fff;
+    font-size: px2rem(12);
+}

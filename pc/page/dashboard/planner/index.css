@@ -1,0 +1,410 @@
+@charset "UTF-8";
+
+@import url(scc-bp-message-tip/message-tip.css);
+
+@import url(../../../common/fullcalendar/fullcalendar.css);
+
+@import url(alpha-balloon/balloon.css);
+
+@import url(alpha-button/button.css);
+
+@import url(alpha-animation/animate.css);
+
+html {
+    min-width: 990px;
+    width: 100%;
+    position: absolute;
+}
+
+body {
+    background-color: #F4F4F4;
+    font-weight: lighter;
+    font: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.eh-loading-help {
+    vertical-align: middle;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(/images/loading-middle.gif) no-repeat center center;
+}
+
+.eh-loading-helper {
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    background: url(/images/loading-middle.gif) no-repeat center center;
+    text-indent: 121px;
+}
+
+.eh-dot-class, .eh-left-side .eh-user-name, .fc-title, .eh-scedule-content .eh-scedule-detail-title, .eh-scedule-content .eh-info-list .eh-info-item.eh-main-products {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.eh-middle-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+a.ui2-button-primary,
+.ui2-button-primary {
+    background: #4569B4;
+    border-color: #4569B4;
+}
+
+a.ui2-button-primary:hover,
+  .ui2-button-primary:hover {
+    background: #2F5094;
+    border-color: #2F5094;
+}
+
+a {
+    color: #4569B4;
+}
+
+.eh-point-arrow {
+    cursor: pointer;
+    background: url(/pc/images/full-icon.png) no-repeat;
+    background-position: -292px 0;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.eh-point-arrow:hover {
+    background-position: -303px 0;
+}
+
+.eh-page {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'wbficonregular';
+  src: url("/pc/images/wbficon.woff");
+}
+
+.eh-left-side {
+    vertical-align: top;
+    display: table-cell;
+    width: 240px;
+    border-right: #CFCFCF solid 1px;
+}
+
+.eh-left-side .eh-person-header {
+    width: 240px;
+}
+
+.eh-left-side .eh-phtoto {
+    margin: 22px auto 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #D3D6DB;
+    line-height: 100px;
+    text-align: center;
+    font-size: 38px;
+}
+
+.eh-left-side .eh-phtoto:hover {
+    text-decoration: none;
+}
+
+.eh-left-side .eh-person-info {
+    text-align: center;
+    margin: 10px 18px 0;
+    font-size: 12px;
+}
+
+.eh-left-side .eh-user-name {
+    max-width: 100%;
+    font-size: 18px;
+    color: #333;
+    max-height: 48px;
+    overflow: hidden;
+}
+
+.eh-left-side .eh-user-career {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.eh-left-side .eh-nav-list {
+    width: 240px;
+    margin-top: 20px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item-active, .eh-left-side .eh-nav-list .eh-nav-item:hover, .eh-left-side .eh-nav-list .eh-nav-item.active {
+    border-top: solid 1px #CFCFCF;
+    border-bottom: solid 1px #CFCFCF;
+    border-left: solid 6px #F6C127;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item-active .eh-nav-link, .eh-left-side .eh-nav-list .eh-nav-item:hover .eh-nav-link, .eh-left-side .eh-nav-list .eh-nav-item.active .eh-nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item {
+    cursor: pointer;
+    font-size: 18px;
+    background: url(../../../images/left-marker.png) center center no-repeat;
+    border-left: solid 6px #F4F4F4;
+    border-top: solid 1px #F4F4F4;
+    border-bottom: solid 1px #F4F4F4;
+    font-weight: lighter;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item.eh-nav-zone {
+    background-position: 51px 10px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item.eh-nav-connect {
+    background-position: 51px -42px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item.eh-nav-message {
+    background-position: 51px -97px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item.eh-nav-watch {
+    background-position: 51px -153px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item.eh-nav-schedule {
+    background-position: 51px -209px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item.eh-nav-account {
+    background-position: 51px -268px;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item .eh-nav-link {
+    display: block;
+    text-indent: 98px;
+    height: 48px;
+    line-height: 48px;
+    color: #666;
+}
+
+.eh-left-side .eh-nav-list .eh-nav-item .eh-nav-link:hover {
+    text-decoration: none;
+}
+
+.eh-middle-side {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.eh-right-side {
+    display: table-cell;
+    width: 280px;
+    vertical-align: top;
+}
+
+.eh-middle-side {
+    display: none;
+}
+
+.eh-right-side {
+    width: auto;
+    min-width: 750px;
+}
+
+.eh-full-calendar {
+    width: 100%;
+    margin: 0;
+}
+
+.fc-view-container {
+    background: #fff;
+}
+
+.fc-toolbar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.fc-head td {
+    border: none;
+    border-bottom: solid 1px #CFCFCF;
+    padding: 10px 0;
+    background-color: #F4F4F4;
+}
+
+.fc-head th.fc-day-header {
+    border-color: transparent;
+}
+
+.fc-body tr td:first-child {
+    border-left: none !important;
+}
+
+.fc-body tr td:last-child {
+    border-right: none !important;
+}
+
+.fc-toolbar {
+    position: relative;
+}
+
+.fc-toolbar .fc-left {
+    width: 238px;
+    position: absolute;
+    left: 50%;
+    margin-left: -119px;
+    text-align: center;
+}
+
+.fc-toolbar .fc-left h2 {
+    float: none;
+    display: inline-block;
+    font-size: 32px;
+}
+
+.fc-toolbar .fc-state-default.fc-corner-right.fc-today-button {
+    display: none;
+}
+
+.fc-toolbar .fc-corner-left {
+    margin-right: 139px;
+}
+
+.fc-toolbar .fc-corner-right {
+    margin-left: 139px;
+}
+
+.fc-toolbar .fc-state-default {
+    border: none;
+    background: url(../../../images/turn.png) no-repeat 0 0 #F4F4F4;
+    width: 15px;
+    height: 27px;
+    box-shadow: none;
+}
+
+.fc-toolbar .fc-state-default .fc-icon {
+    display: none !important;
+}
+
+.fc-toolbar .fc-state-default.fc-corner-right {
+    background-position: 0 -64px;
+}
+
+.fc-event {
+    background-color: #3F68B2;
+    border: none;
+    height: 20px;
+    line-height: 22px;
+    text-indent: 3px;
+}
+
+.fc-title {
+    font-size: 12px;
+    max-width: 100%;
+    display: block;
+}
+
+.fc-ltr .fc-h-event.fc-not-start,
+.fc-rtl .fc-h-event.fc-not-end {
+    margin-left: 2px;
+    border-left-width: 0;
+    padding-left: 1px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.fc-event .fc-content {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.fc-event-container {
+    cursor: pointer;
+}
+
+.eh-scedule-content .ui2-button-default {
+    margin-left: 7px;
+}
+
+.eh-scedule-content .eh-scedule-date {
+    text-align: right;
+    color: #999;
+}
+
+.eh-scedule-content .eh-scedule-detail-title {
+    color: #333;
+    display: block;
+    cursor: pointer;
+}
+
+.eh-scedule-content .eh-title-big {
+    font-size: 24px;
+}
+
+.eh-scedule-content .eh-title-middle {
+    font-size: 18px;
+}
+
+.eh-scedule-content .eh-info-list {
+    margin-top: 15px;
+    list-style-type: none;
+    margin-left: 7px;
+}
+
+.eh-scedule-content .eh-info-list .eh-info-item {
+    color: #666;
+    font-size: 12px;
+    height: 26px;
+}
+
+.eh-scedule-content .eh-info-list .eh-info-item-content {
+    margin-left: 5px;
+}
+
+.eh-scedule-content .eh-info-list .eh-info-item-content.eh-location {
+    display: inline-block;
+    background: url(../../../images/location-marker.png) no-repeat left center;
+    padding-left: 15px;
+    height: 16px;
+    line-height: 17px;
+}
+
+.eh-exhibition-photos {
+    list-style-type: none;
+    font-size: 0;
+    margin-left: 7px;
+    margin-bottom: 10px;
+    display: table;
+}
+
+.eh-exhibition-photos .eh-exhibition-photo {
+    display: table-cell;
+    padding-right: 5px;
+    background: no-repeat center center;
+    margin-right: 5px;
+    background-size: 100% 100%;
+    margin-top: 5px;
+}
+
+.eh-exhibition-photos .eh-exhibition-photo .ex-exhibition-pic {
+    height: 105px;
+}

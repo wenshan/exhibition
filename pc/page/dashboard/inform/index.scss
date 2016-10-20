@@ -1,0 +1,240 @@
+/*
+    对于dialog样式的重写
+*/
+@import "alpha-dialog/dialog.css";
+.ui2-dialog-bd {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.inform-dialog-wrap {
+    .inform-wrap {
+        .eh-inform-you-select {
+            background: #f5f7fa;
+            height: 32px;
+            padding-left: 60px;
+            font-size: 14px;
+            color: #999999;
+            line-height: 32px;
+            margin-bottom: 8px;
+            overflow: hidden;
+            span
+            {
+                float: left;
+            }
+            .eh-inform-user-name {
+                width: 439px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-left: 4px;
+            }
+            .eh-inform-user-photo {
+                width: 16px;
+                height: 16px;
+                background: #E0E0E0;
+                border: 1px solid #E0E0E0;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                top: 6px;
+                margin-left: 4px;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        .eh-inform-content {
+            padding: 0 24px;
+            .eh-attending-event-box {
+                .eh-attending-title {
+                    line-height: 38px;
+                    font-size: 18px;
+                    color: #999999;
+                    padding-left: 34px;
+                    // margin-top: 22px;
+                    margin-top: 12px;
+                    span {
+                        font-size: 14px;
+                        color: #999999;
+                    }
+                }
+                .eh-attending-wrap {
+                    height: 120px;
+                    position: relative;
+                    .eh-attending-list-right-btn,
+                    .eh-attending-list-left-btn {
+                        height: 120px;
+                        width: 34px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        line-height: 120px;
+                        cursor: pointer;
+                        text-align: center;
+                        .eh-attending-list-right-btn-icon,
+                        .eh-attending-list-left-btn-icon {
+                            display: inline-block;
+                            width: 14px;
+                            height: 26px;
+                            background: url(../../../images/left-right-button.png) -74px 0 no-repeat;
+                        }
+                        .eh-attending-list-left-btn-icon-disabled {
+                            background-position: -74px -43px;
+                        }
+                    }
+                    .eh-attending-list-right-btn {
+                        left: auto;
+                        right: 0;
+                        .eh-attending-list-right-btn-icon {
+                            background-position: 0 0;
+                        }
+                        .eh-attending-list-right-btn-icon-disabled {
+                            background-position: 0 -43px;
+                        }
+                    }
+                    .eh-attending-list-wrap {
+                        height: 120px;
+                        margin-left: 34px;
+                        margin-right: 34px;
+                        overflow: hidden;
+                        position: relative;
+                        .eh-attending-list {
+                            position: absolute;
+                            height: 120px;
+                            left: 0;
+                            top: 0;
+                            overflow: hidden;
+                            .eh-attending-item {
+                                width: 206px;
+                                height: 108px;
+                                float: left;
+                                border: 1px solid #f2f2f2;
+                                position: relative;
+                                padding: 10px 16px 0 16px;
+                                margin-right: 8px;
+                                cursor: pointer;
+                                .eh-attending-time {
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                    color: #999999;
+                                }
+                                .eh-attending-name {
+                                    margin-bottom: 0;
+                                    font-size: 16px;
+                                    line-height: 18px;
+                                    color: #666666;
+                                    height: 68px;
+                                    overflow: hidden;
+                                }
+                                .eh-attending-triangle-wrap {
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    width: 22px;
+                                    height: 22px;
+                                    font-size: 10px;
+                                    color: #fff;
+                                    line-height: 30px;
+                                    overflow: hidden;
+                                    text-align: right;
+                                    .ui2-icon-selected {
+                                        margin-right: -1px;
+                                    }
+                                }
+                                .eh-attending-triangle {
+                                    display: inline-block;
+                                    width: 0;
+                                    height: 0;
+                                    border-bottom: 22px solid #e6e6e6;
+                                    border-left: 22px solid transparent;
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: -1;
+                                }
+                            }
+                            .eh-attending-item-selected {
+                                border: 2px solid #A4B6D7;
+                                width: 204px!important;
+                                height: 106px;
+                                .eh-attending-triangle {
+                                    display: inline-block;
+                                    width: 0;
+                                    height: 0;
+                                    border-bottom: 22px solid #A4B6D7;
+                                    border-left: 22px solid transparent;
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: -1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .eh-attending-input-box {
+                    height: 121px;
+                    width: 600px;
+                    margin: 0 auto;
+                    border: 1px solid #dae2ed;
+                    .eh-attending-textarea {
+                        height: 82px;
+                        resize: none;
+                        border: none;
+                        width: 584px;
+                        padding: 4px 8px;
+                        color: #333333;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    .eh-attending-left-word {
+                        height: 31px;
+                        line-height: 31px;
+                        font-size: 12px;
+                        text-align: right;
+                        padding-right: 18px;
+                        span {
+                            color: #FF7300;
+                            padding-right: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .eh-inform-buttons {
+        width: 129px;
+        height: 40px;
+        background: #4569b4;
+        margin: 0 auto;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .eh-inform-feedback {
+        text-align: center;
+        font-size: 14px;
+        line-height: 18px;
+        color: #CC1616;
+        padding-top: 8px;
+        height: 26px;
+    }
+    .eh-inform-times-tip {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 18px;
+        color: #333333;
+        padding-left: 8px;
+        font-weight: lighter;
+    }
+}

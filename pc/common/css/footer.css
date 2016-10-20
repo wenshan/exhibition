@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    background: #f4f4f4;
+    padding-top: 40px;
+    padding-bottom: 51px;
+    text-align: center;
+}
+
+.footer .footer-top {
+    font-size: 18px;
+    line-height: 21px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.footer .footer-top .about-us {
+    display: inline-block;
+    padding-right: 20px;
+    color: #666666;
+}
+
+.footer .footer-top .privacy-statement {
+    display: inline-block;
+    padding-left: 20px;
+    color: #666666;
+}
+
+.footer hr {
+    display: none;
+}

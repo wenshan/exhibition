@@ -1,0 +1,29 @@
+@import "../../../hotcss/px2rem.scss";
+
+.eh-view-footer {
+    text-align: center;
+    height: px2rem(30);
+    line-height: px2rem(30);
+    margin: 0;
+
+    .eh-view-more {
+        display: none;
+        font-size: px2rem(14);
+        margin: 0 0 px2rem(15);
+        color: $fontColorLight;
+    }
+
+    .eh-loading-m {
+        display: none;
+        box-shadow: 0 1px .1875rem -.125rem rgba(0, 0, 0, .2);
+        background: url(../../../images/loading-m.gif) no-repeat center center;
+        -webkit-background-size: 19px auto;
+        background-size: px2rem(19) auto;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: px2rem(20);
+        line-height: px2rem(20);
+        margin: 0;
+    }
+
+}

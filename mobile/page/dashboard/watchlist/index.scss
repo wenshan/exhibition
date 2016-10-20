@@ -1,0 +1,220 @@
+@import "../../../hotcss/px2rem.scss";
+@import "../../../common/css/common.scss";
+@import "../../../common/css/base.scss";
+@import "../../../common/components/zepto-modals/modals.scss";
+@import "../../../common/components/infinite-scroll/infinite-scroll.scss";
+@import "../../../common/css/no-result.scss";
+@import "../../../common/components/go-top/index.scss";
+
+.infinite-scroll-preloader {
+    margin-top: -20px;
+}
+
+// 顶部标题部分
+.eh-search-header {
+    height: px2rem(37);
+    line-height: px2rem(47);
+}
+
+.eh-search-res {
+    margin-left: px2rem(15);
+
+    .eh-search-res-num {
+        display: inline-block;
+        font-size: px2rem(18);
+    }
+
+    .eh-search-res-marker {
+        display: inline-block;
+        color: $fontColorLight;
+        font-size: px2rem(14);
+    }
+
+}
+
+.eh-header-refine {
+    margin-right: px2rem(10);
+    float: right;
+    text-align: center;
+    color: $colorBlue;
+
+    .eh-refine-marker {
+        display: inline-block;
+        width: px2rem(19);
+        height: px2rem(19);
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAU1JREFUOBFjdEjcHP6f4X8jw3/GLwykAMb/PIwMjPUsIM3swuzGu3rcv5Ki361kJ/fPtz/PMgE1ffv15Z8oKZpBav+9+y0O0svExMyU+u/nn7WuSbukiDXEOXWr2u9//9f+Z2JJZto/x+csCwNj7q//Pza6ZewUI2SIXcJW3T+//61kYmWNOTTX6zzICwz75vscY2RmLP3x49dm5+w9wrgMsU/YZMrI+HchIzNr6P7ZHldB6sAGgBgH5vgeYGZkrPvz7ftmh4L9AiAxZOCUvNWOgYFxOjsDu/+BuR53YHJwA0AC++f77GT4z9D+7+OXDTAFINohaavJn7//ullYOL13zXd/jCyHYgBI4uAC382M/xl4kBUBo9qIkYlx7t45Li+RxUFsDAPQFRDiD1cD/jMwvCDkd5g81jA4tMDXB6aAEM1CSAFI/v+//zizOgBZSXFkrLcj5AAAAABJRU5ErkJggg==) no-repeat center center;
+        background-size: 100% 100%;
+        margin-right: px2rem(5);
+        vertical-align: middle;
+    }
+
+    .eh-refine-text {
+        // @extend .font-size-14;
+        font-size: px2rem(14);
+        position: relative;
+        vertical-align: middle;
+    }
+
+}
+
+.eh-content {
+    position: relative;
+    top: px2rem(-10);
+}
+
+.eh-content .eh-list-item {
+    margin-bottom: px2rem(7);
+    padding-top: px2rem(19);
+    padding-bottom: px2rem(7);
+    background: #fff;
+    border-top: solid #E0E0E0 1px;
+    border-bottom: solid #E0E0E0 1px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.eh-content .eh-item-header {
+    @extend .eh-two-lines;
+    margin: px2rem(5) px2rem(17) 0;
+    // @extend .font-size-14;
+    font-size: px2rem(14);
+    font-weight: bold;
+    color: #333;
+
+    em {
+        color: $colorOrange;
+    }
+
+}
+
+.eh-item-detail {
+    margin: 0 px2rem(17);
+    list-style-type: none;
+
+    .eh-detail-item {
+        margin-top: px2rem(7);
+
+        .eh-detail-item-inner {
+            @extend .eh-two-lines;
+            color: $fontColorLight;
+            font-size: px2rem(14);
+            line-height: 1.3em;
+
+            .eh-left-title {
+                color: $fontColorLighter;
+                display: inline-block;
+                width: px2rem(105);
+                vertical-align: middle;
+                font-size: 1.1em;
+            }
+
+            .eh-right-text {
+                color: #333;
+                vertical-align: middle;
+                font-size: 1em;
+
+                em {
+                    color: $colorOrange;
+                }
+
+            }
+
+            .eh-mobile-location {
+                width: px2rem(13);
+                height: px2rem(16);
+                line-height: px2rem(16);
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAhNJREFUKBV1ks1rE2EQxrMfCYat5pBLQhHbS3pRBEkJnhQ/KtiCeBNPPSXZJNgiofRSuqgoegkaSbKxSIuIKAo9VCj6J0hORbRX0RgsCgZJIdkk/mbJhhLoC7Mz88w8M/POu4rvwEkmk7O4t5DjyD6iK4qy2e/3H1ar1Ra+exT55vN5o9lsPiGhS8I9Er4Jnslkxnq93jUko+v6YqlU+iS4S0qlUmvYH23bfi1gLpebdBxn0u/37xSLxT3IEfx3qqper1QqvzQIl6l+iur3Lcs6EovFNrrd7hW4Bvp2PB4fJ3E7kUh8paNVq9Xe6gQXERPx1ev1VdQHCmyIL4eidjqdnmO0LewV7HEVfMK7A/bZgwQhBQKBu0xyQ2x0jW7TQvotwGEnGAz+JXZsEP/BsoIqbIe7BAQEqLP2M4MEV7XbbY0ce4CdJmdH3mGr0WjcBFxnlCWS3jC33GmX5DjLYOLqe1k/9slyufxZDYVCzwgm6aaz3u+aps0wt7zXReRLOBz+J11YuUmD50jffScq50g4yjs9kITRk81mT0B6EY1GL1DckUX4IpFICXWJYGyUID6Ep3RYEIL4bicxTNOcYuY1wzBmCoWC/Hfu4W3yEMZ4YGsA+dxO4nDBXYKPW61WxQsy9nnsc0xyx8NEDzt5IJUfQf7JD7rJJl/R+Sqd/3hx0cNOHshll9neVKfTeQk2P0qQvP/RCftMdGfsFAAAAABJRU5ErkJggg==');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                margin-right: px2rem(3);
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            .eh-connected-marker {
+                display: inline-block;
+                width: px2rem(16);
+                height: px2rem(13);
+                line-height: px2rem(13);
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAABGdBTUEAALGPC/xhBQAAANJJREFUKBWNUokNgzAMxDTtspBpCEuwBBmCKVggqgpJfUiWTB61SJHPPvtsk9A0Tan774vW2keeahBggnJC+yml3jn30THBvYBfloiqk1YFuCPpw+JpGIanjgm+VtDdQfC4sdUxyz0LASSgeBzH23QQ1qLruppt28ItSalHhTsuxk88dEzwJYAEOUwQ7/sSH9Z732rUYYXYuiLpAsvjn9oXbGqPA1254LaGFOS2GI2LaZ7n6r55MfzqLYBYlqV4tojLF0K4+JZA3Pf9Lck1yzzCxxefVnpUnovjFQAAAABJRU5ErkJggg==');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                margin-right: px2rem(3);
+                margin-left: px2rem(5);
+                vertical-align: middle;
+            }
+
+        }
+
+    }
+
+}
+
+.eh-products-list-container {
+    margin: px2rem(10) px2rem(17) 0;
+}
+
+.eh-products-list {
+    display: table;
+    width: 100%;
+
+    .eh-products-item {
+        display: table-cell;
+        width: 33.33%;
+        text-align: center;
+        height: px2rem(115);
+
+        .eh-products-item-inner {
+            height: 100%;
+            margin: 0 px2rem(2);
+            border: solid 1px $borderColorLight;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                vertical-align: middle;
+            }
+
+        }
+
+    }
+
+    .eh-products-item.eh-product-item-first {
+        .eh-products-item-inner {
+            margin-left: 0;
+            margin-right: px2rem(2);
+        }
+
+    }
+
+    .eh-products-item.eh-product-item-last {
+        .eh-products-item-inner {
+            margin-left: px2rem(2);
+            margin-right: 0;
+        }
+
+    }
+
+}
+
+// 底部按钮
+.eh-button-container {
+    margin: px2rem(10) px2rem(17) 0;
+}
+
+.eh-connection-corner {
+    text-align: right;
+    color: #666;
+    font-size: px2rem(10);
+    margin-right: px2rem(17);
+
+    .eh-right-text {
+        color: #666;
+    }
+
+}

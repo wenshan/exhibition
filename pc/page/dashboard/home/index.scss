@@ -1,0 +1,502 @@
+@import "../../../common/css/common.scss";
+@import "../../../common/css/backend.scss";
+@import "alpha-icon/icon-flag-s.css";
+@import "alpha-balloon/balloon.css";
+@import "scc-bp-message-tip/message-tip.css";
+@import "../../../common/css/no-result.scss";
+
+.eh-dashboard {
+    color: $fontColor;
+    display: table;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom: solid 1px $borderColor;
+}
+
+.eh-content-inner {
+    margin: 38px 20px 44px 20px;
+}
+
+// 待办显示
+.eh-todo-list {
+    font-size: 0;
+
+    .eh-todo-list-item {
+        font-size: $fontSize14;
+        display: inline-block;
+        width: 33.33%;
+
+        .eh-todo-inner {
+            display: block;
+            color: #fff;
+            border-radius: 5px;
+            height: 87px;
+            text-decoration: none !important;
+            background: #4569B4 no-repeat center center;
+            background-size: 227px 100%;
+
+            .eh-todo-item-title {
+                padding: 16px 0 0 25px;
+            }
+
+            .eh-todo-item-num {
+                margin: 6px 0 0 25px;
+                font-size: $fontSize36;
+            }
+
+        }
+
+        &.eh-todo-watch {
+            .eh-todo-inner {
+                margin-right: 6px;
+                background-image: url(./images/list-normal.png);
+
+                &:hover {
+                    background-image: url(./images/list-hover.png);
+                    background-color: #32519D;
+                }
+
+            }
+
+        }
+
+        &.eh-todo-connections {
+            .eh-todo-inner {
+                margin: 0 3px;
+                background-image: url(./images/connect-normal.png);
+
+                &:hover {
+                    background-image: url(./images/connect-hover.png);
+                    background-color: #32519D;
+                }
+
+            }
+
+        }
+
+        &.eh-todo-messages {
+            .eh-todo-inner {
+                margin-left: 6px;
+                background-image: url(./images/message-normal.png);
+
+                &:hover {
+                    background-image: url(./images/connect-hover.png);
+                    background-color: #32519D;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+// 最近事宜
+.eh-scedule {
+    border: solid $borderColor 1px;
+    background: #fff;
+    margin-top: 15px;
+
+    .eh-scedule-header {
+        height: 45px;
+        line-height: 45px;
+
+        .eh-scedule-link {
+            float: right;
+            display: block;
+            height: 16px;
+            line-height: 16px;
+            background: url(../../../images/scedule.png) no-repeat left center;
+            padding-left: 23px;
+            position: relative;
+            top: 16px;
+            margin-right: 20px;
+            z-index: 9;
+            cursor: pointer;
+        }
+
+        .eh-scedule-header-title {
+            font-size: $fontSize18;
+            color: $lightFontColor;
+            margin-left: 22px;
+            position: relative;
+            top: 4px;
+        }
+
+    }
+
+    .eh-exhibition-item {
+        border-top: solid 1px $lightBorderColor;
+    }
+
+    // 中间内容
+    .eh-scedule-content {
+        margin: 18px 20px 15px;
+
+        .eh-scedule-date {
+            text-align: right;
+            color: $lighterFontColor;
+        }
+
+        .eh-scedule-detail {
+            position: relative;
+
+            .eh-overdue {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                height: 16px;
+                line-height: 16px;
+                padding-left: 22px;
+                background: url(./images/overdue.png) left center no-repeat;
+            }
+
+        }
+
+        // title
+        .eh-scedule-detail-title {
+            color: $fontColor;
+            max-height: 63px;
+            overflow: hidden;
+            display: block;
+            margin-right: 146px;
+        }
+
+        .eh-title-big {
+            font-size: $fontSize18;
+        }
+
+        .eh-title-middle {
+            font-size: $fontSize18;
+        }
+
+        // info list
+        .eh-info-list {
+            margin-top: 15px;
+            list-style-type: none;
+            margin-left: 7px;
+
+            .eh-info-item {
+                color: $lightFontColor;
+                font-size: $fontSize14;
+                height: 26px;
+            }
+
+            .eh-info-item-content {
+                margin-left: 5px;
+
+                &.eh-location {
+                    display: inline-block;
+                    background: url(../../../images/location-marker.png) no-repeat left center;
+                    padding-left: 15px;
+                    height: 16px;
+                    line-height: 17px;
+                }
+
+            }
+
+            .eh-link-small {
+                color: $colorBlue;
+            }
+
+        }
+
+    }
+
+    // 中间展会图片
+    .eh-exhibition-photos {
+        display: table;
+        list-style-type: none;
+        font-size: 0;
+        margin-top: 5px;
+
+        .eh-exhibition-photo {
+            display: table-cell;
+            padding: 0 5px;
+            background: no-repeat center center;
+            background-size: 100% 100%;
+
+            .ex-exhibition-pic {
+                height: 105px;
+            }
+
+        }
+
+    }
+
+    // 底部联系人
+    .eh-scedule-footer {
+        height: 58px;
+        line-height: 58px;
+        background-color: $weightBgColor;
+        border-top: #EEEEEE solid 1px;
+
+        // 左边标题部分
+        .eh-exhibitors-title {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .eh-exhibitors-num {
+            font-size: $fontSize22;
+            color: $colorBlue;
+        }
+
+        .eh-exhibitors-other {
+            font-size: $fontSize12;
+            color: $lighterFontColor;
+        }
+
+        // 右边展会参展者头像列表
+        .eh-exhibitors-list {
+            font-size: 0;
+            float: right;
+            position: relative;
+            top: 0;
+            margin-right: 10px;
+
+            .eh-item-conmmon {
+                font-size: $fontSize14;
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                background: no-repeat center center;
+                margin-right: 10px;
+                border-radius: 50%;
+                text-align: center;
+                background-size: 100% 100%;
+                vertical-align: middle;
+            }
+
+            .eh-exhibitor-photo {
+                @extend .eh-item-conmmon;
+                background-color: #D3D6DB;
+                border: solid 1px #EEE;
+                // background-image: url(../../../images/exhibitor-photo.png);
+            }
+
+            .eh-exhibitor-dot {
+                @extend .eh-item-conmmon;
+                border: solid 1px #EEE;
+                background-image: url(../../../images/exhibitor-dot.png);
+
+                &:hover {
+                    // box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
+                }
+
+                a {
+                    display: block;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+// 右边区域
+.eh-right-side-inner {
+    display: block;
+    margin: 38px 20px 0 0;
+    border: solid 1px $weightBorderColor;
+    text-decoration: none !important;
+
+    .eh-right-header {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: solid 1px #ccc;
+
+        .eh-right-title {
+            margin-left: 13px;
+            font-size: $fontSize14;
+            color: $lightFontColor;
+            display: inline-block;
+            position: relative;
+
+            .eh-new-marker {
+                display: inline-block;
+                width: 34px;
+                height: 14px;
+                line-height: 14px;
+                color: #fff;
+                font-size: $fontSize10;
+                position: absolute;
+                right: -37px;
+                top: 6px;
+                background: url(../../../images/new-marker.png) no-repeat left top;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+    // 列表
+    .eh-right-list-item {
+        margin: 0 10px;
+        padding: 12px 0;
+        border-bottom: dashed 1px $dottedBorderColor;
+        font-size: 0;
+
+        .eh-right-item-photo {
+            font-size: $fontSize14;
+            display: inline-block;
+            vertical-align: middle;
+            width: 82px;
+            height: 82px;
+            line-height: 82px;
+            text-align: center;
+            background: no-repeat center center;
+            background-size: 100% 100%;
+            background-color: #D3D6DB;
+        }
+
+        .eh-right-item-content {
+            font-size: $fontSize14;
+            display: inline-block;
+            vertical-align: middle;
+            width: 140px;
+            margin-left: 12px;
+
+            .eh-exhibitor-name {
+                @extend .eh-dot-class;
+                color: $lightFontColor;
+                margin-bottom: 7px;
+                height: 19px;
+                word-wrap: break-word;
+            }
+
+            .eh-exhibitor-content {
+                list-style-type: none;
+            }
+
+            .eh-exhibitor-detail {
+                margin-top: 3px;
+                font-size: $fontSize10;
+                color: $lighterFontColor;
+
+                &.eh-exhibitor-detail-sec {
+                    height: 29px;
+                    overflow: hidden;
+                }
+
+            }
+
+        }
+
+    }
+
+    .eh-right-list .eh-right-list-item:last-child {
+        border-bottom: none;
+    }
+
+}
+
+.eh-country {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+.eh-personal-info {
+    display: table;
+    width: 100%;
+}
+
+.eh-left-photo-par {
+    width: 60px;
+    display: table-cell;
+    vertical-align: middle;
+
+    .eh-left-photo {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #D3D6DB;
+        background-size: 100% 100%;
+        font-size: $fontSize18;
+    }
+
+}
+
+.eh-personal-right {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+    text-align: left;
+
+    .eh-personal-name {
+        @extend .eh-dot-class;
+        max-width: 200px;
+        font-size: $fontSize14;
+        max-height: 32px;
+        overflow: hidden;
+    }
+
+    .eh-personal-career {
+        @extend .eh-dot-class;
+        max-width: 200px;
+        font-size: $fontSize12;
+        color: $lighterFontColor;
+        margin-top: 5px;
+        max-height: 30px;
+    }
+
+    .eh-personal-company {
+        max-width: 200px;
+        font-size: $fontSize12;
+        color: $lighterFontColor;
+        margin-top: 5px;
+        max-height: 30px;
+        overflow: hidden;
+    }
+
+}
+
+.eh-no-result {
+    display: none;
+    margin: 30px 0;
+    text-align: center;
+    color: $lightFontColor;
+
+    .eh-no-result-inner {
+        display: inline-block;
+        width: 196px;
+        height: 224px;
+        background: url(./images/no-result.png) no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .eh-no-result-text {
+        margin-top: 26px;
+        font-size: $fontSize12;
+        color: $lightFontColor;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .eh-right-side {
+        display: none;
+    }
+
+}
+
+.eh-info-item-title {
+    display: inline-block;
+    vertical-align: middle;
+    width: 130px;
+    color: #999;
+}

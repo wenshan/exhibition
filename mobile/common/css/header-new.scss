@@ -1,0 +1,88 @@
+@import "./common.scss";
+// 定义通用字体大小样式
+$fontSize12:0.5rem;
+$fontSize13:0.7rem;
+$fontSize14:0.76rem;
+$fontSize15:0.78rem;
+$fontSize16:0.8rem;
+$fontSize18: 0.85rem;
+$fontSize20:0.92rem;
+
+.eh-search-header {
+    position: relative;
+    height: px2rem(32);
+    line-height: px2rem(32);
+    margin: 0 px2rem(23);
+    position: relative;
+    top: px2rem(10);
+
+    .eh-refine {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: px2rem(-17/2);
+        width: px2rem(21);
+        height: px2rem(17);
+        background: url("//img.alicdn.com/tps/TB1hGs_LVXXXXaHXFXXXXXXXXXX-21-16.png") center center no-repeat;
+        background-size: 100%;
+    }
+
+    .eh-search {
+        position: relative;
+        margin: 0 px2rem(34+15) 0 px2rem(21+15);
+        border-radius: px2rem(16);
+        border: solid 1px #fff;
+        background: rgba(255, 255, 255, 0.3);
+
+        .eh-search-marker {
+            display: block;
+            position: absolute;
+            left: px2rem(18);
+            width: px2rem(16);
+            height: px2rem(18);
+            top: 50%;
+            margin-top: px2rem(-18/2);
+            background: url(../../images/search-button.png) center center no-repeat;
+            background-size: 100%;
+        }
+
+        .eh-search-inp {
+            margin-left: px2rem(20+16+7);
+            margin-right: px2rem(10);
+            font-size: $fontSize14;
+            border: none;
+            width: px2rem(180);
+            background: transparent;
+            color: #fff;
+            position: relative;
+            top: px2rem(-2);
+
+            &::-webkit-input-placeholder {
+                color: #fff;
+            }
+
+            &:-moz-placeholder {
+                color: #fff;
+            }
+
+            &:-ms-input-placeholder {
+                color: #fff;
+            }
+        }
+
+    }
+
+    .eh-login {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: px2rem(34);
+        height: px2rem(15);
+        line-height: px2rem(15);
+        margin-top: px2rem(-15/2);
+        color: #fff;
+        text-align: center;
+        font-size: $fontSize13;
+    }
+
+}

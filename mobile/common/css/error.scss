@@ -1,0 +1,105 @@
+@import "../../hotcss/px2rem.scss";
+@import "./common.scss";
+@import "./base.scss";
+.eh-no-content-show {
+    background: #fff;
+}
+
+.eh-no-content-show {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.eh-no-result {
+
+    background: #f6f8fa;
+    .eh-no-result-left {
+        display: block;
+        width: 100%;
+        height: px2rem(250);
+        background: url(../../images/error404.png) no-repeat px2rem(50) center;
+        background-size: auto 100%;
+        margin: 0 auto;
+    }
+
+    .eh-no-result-right {
+        display: block;
+        font-size: px2rem(18);
+        margin-left: px2rem(10);
+        margin-top: px2rem(20);
+        overflow: hidden;
+        .n404
+        {
+            font-size: px2rem(40);
+            display: block;
+            float: left;
+            width: px2rem(120);
+            text-align: right;
+
+        }
+        .error-word
+        {
+            display: block;
+            width: px2rem(230);
+            float: left;
+        }
+    }
+}
+.eh-no-result-gap
+{
+    padding-top: px2rem(20);
+    text-align: center;
+    padding-bottom: px2rem(20);
+    border-bottom: 2px solid #eaeaea;
+}
+.eh-middle-gap-content
+{
+    font-size: px2rem(18);
+    color: #333333;
+}
+.eh-item-category
+{
+    font-size: px2rem(15);
+    margin-bottom: px2rem(6);
+}
+.eh-recommend-up
+{
+    font-size: px2rem(14);
+    color: #666666;
+    line-height: px2rem(18);
+    padding-left: px2rem(14);
+    padding-right: px2rem(14);
+    .eh-item-date
+    {
+        font-size: px2rem(12);
+        color: #737373;
+    }
+    .eh-item-title
+    {
+        font-size: px2rem(22);
+        margin-top: px2rem(16);
+        margin-bottom: px2rem(18);
+    }
+    .eh-location-name
+    {
+        font-size: px2rem(16);
+        margin-bottom: px2rem(18);
+        display: inline-block;
+    }
+    .eh-item-info
+    {
+        display: inline-block;
+        font-size: px2rem(14);
+        line-height: px2rem(18);
+        margin-bottom: px2rem(10);
+    }
+}
+.eh-recommend-down
+{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: px2rem(20);
+    img{
+        width: 100%;
+    }
+}

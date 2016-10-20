@@ -1,0 +1,1 @@
+<h3>{{data.totalItem}} {{#compare data.totalItem '==' 1}}Exhibitor{{else}}Exhibitors{{/compare}}</h3>

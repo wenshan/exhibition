@@ -1,0 +1,142 @@
+.eh-left-side {
+    vertical-align: top;
+    display: table-cell;
+    width: $leftSideWidth;
+    border-right: $borderColor solid 1px;
+
+    .eh-person-header {
+        width: 240px;
+    }
+
+    .eh-phtoto {
+        margin: 22px auto 20px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        // background-image: url(../../../images/business-man.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-color: #D3D6DB;
+        line-height: 100px;
+        text-align: center;
+        font-size: $fontSize38;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+    }
+
+    .eh-person-info {
+        text-align: center;
+        margin: 10px 18px 0;
+        font-size: $fontSize12;
+    }
+
+    .eh-user-name {
+        @extend .eh-dot-class;
+        max-width: 100%;
+        font-size: 18px;
+        color: $fontColor;
+        max-height: 48px;
+        overflow: hidden;
+    }
+
+    .eh-user-career {
+        margin-top: 10px;
+        font-size: 16px;
+        color: $lightFontColor;
+    }
+
+    .eh-nav-list {
+        width: 240px;
+        margin-top: 20px;
+
+        .eh-nav-item-active {
+            border-top: solid 1px $borderColor;
+            border-bottom: solid 1px $borderColor;
+            border-left: solid 6px $borderYellow;
+
+            .eh-nav-link {
+                color: #333;
+                font-weight: bold;
+            }
+
+        }
+
+        .eh-nav-item {
+            cursor: pointer;
+            font-size: $fontSize18;
+            background: url(../../../images/left-marker.png) center center no-repeat;
+            border-left: solid 6px $bgColor;
+            border-top: solid 1px $bgColor;
+            border-bottom: solid 1px $bgColor;
+            font-weight: lighter;
+
+            &:hover {
+                @extend .eh-nav-item-active;
+            }
+
+        }
+
+        .eh-nav-item.active {
+            @extend .eh-nav-item-active;
+        }
+
+        .eh-nav-item.eh-nav-zone {
+            background-position: 51px 10px;
+        }
+
+        .eh-nav-item.eh-nav-connect {
+            background-position: 51px -42px;
+        }
+
+        .eh-nav-item.eh-nav-message {
+            background-position: 51px -97px;
+        }
+
+        .eh-nav-item.eh-nav-watch {
+            background-position: 51px -153px;
+        }
+
+        .eh-nav-item.eh-nav-schedule {
+            background-position: 51px -209px;
+        }
+
+        .eh-nav-item.eh-nav-account {
+            background-position: 51px -268px;
+        }
+
+        .eh-nav-item {
+            .eh-nav-link {
+                display: block;
+                text-indent: 98px;
+                height: 48px;
+                line-height: 48px;
+                color: $lightFontColor;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.eh-middle-side {
+    display: table-cell;
+    vertical-align: top;
+}
+
+// 适用于三列布局
+.eh-right-side {
+    display: table-cell;
+    width: 280px;
+    vertical-align: top;
+}

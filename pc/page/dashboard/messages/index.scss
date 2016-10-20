@@ -1,0 +1,394 @@
+@import "../../../common/css/common.scss";
+@import "../../../common/css/backend.scss";
+@import "scc-bp-message-tip/message-tip.css";
+@import "alpha-button/button.css";
+@import "../../../common/slide/slide.scss";
+@import "alpha-loading-panel/loading-panel.css";
+@import "./src/messages-balloon/balloon.scss";
+@import "../../../common/css/no-result.scss";
+
+.eh-dashboard {
+    display: table;
+    width: 100%;
+    border-bottom: solid 1px $borderColor;
+}
+
+.eh-middle-side {
+    display: table-cell;
+
+    .eh-content-inner {
+        overflow: hidden;
+        margin: 20px;
+        border: solid 1px $borderColor;
+    }
+
+}
+
+// 翻页内容样式
+.eh-item-date {
+    margin-top: 13px;
+    margin-left: 17px;
+}
+
+.eh-item-name {
+    margin-top: 8px;
+    margin-left: 17px;
+    height: 30px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.eh-messages-content {
+    padding: 22px 32px;
+    background: #FFF;
+    position: relative;
+
+    .eh-date {
+        text-align: right;
+        margin-bottom: 5px;
+        color: $lightFontColor;
+        font-size: $fontSize14;
+    }
+
+    .eh-overdue {
+        display: block;
+        position: absolute;
+        right: 32px;
+        top: 45px;
+        height: 16px;
+        line-height: 16px;
+        padding-left: 22px;
+        background: url(/pc/images/overdue.png) left center no-repeat;
+    }
+
+    .eh-content-header {
+        margin-right: 140px;
+        font-size: $fontSize18;
+    }
+
+    .eh-company-info {
+        list-style-type: none;
+
+        * {
+            color: #666666;
+        }
+
+        .eh-company-info-item {
+            margin-top: 10px;
+        }
+
+        .eh-info-item-right {
+            font-size: $fontSize14;
+            vertical-align: middle;
+            display: inline-block;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 420px;
+
+            &.eh-location {
+                display: inline-block;
+                padding-left: 15px;
+                height: 16px;
+                line-height: 16px;
+                background: url(../../../images/location-marker.png) no-repeat left top;
+            }
+
+        }
+
+    }
+
+}
+
+.eh-opt-btn-area {
+    margin: 16px 0 0;
+}
+
+.eh-receive-sent {
+    position: relative;
+    margin-top: 35px;
+    margin-right: 23px;
+    margin-left: 30px;
+
+    .eh-sent-area {
+        display: none;
+    }
+
+    .eh-toggle-select {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $colorBlueLight;
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+            color: $colorBlueLightHover;
+        }
+
+        .eh-toggle-arrow {
+            display: inline-block;
+            width: 10px;
+            height: 4px;
+            vertical-align: middle;
+            background: url(../../../images/arrow-toggle.png) center center no-repeat;
+            margin-left: 5px;
+        }
+
+    }
+
+    .eh-received-header {
+        font-size: $fontSize18;
+        line-height: $fontSize18;
+
+        .eh-received-number {
+            font-size: $fontSize36;
+            color: $colorBlueLight;
+        }
+
+    }
+
+    .eh-received-list {
+        position: relative;
+        margin-top: 0;
+        min-height: 200px;
+        font-size: 0;
+
+        .eh-received-item {
+            display: inline-block;
+            font-size: $fontSize14;
+            width: 25%;
+            margin: 14px 0 0;
+            vertical-align: top;
+
+            .eh-received-item-inner {
+                text-align: center;
+                border: solid 1px #E4E4E4;
+                height: 257px;
+                background-color: #fff;
+                margin-right: 7px;
+            }
+
+            .eh-user-photo {
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                border-radius: 50%;
+                position: relative;
+                background: $photoColor no-repeat center center;
+                background-size: 100%;
+                margin-top: 20px;
+                font-size: 16px;
+                color: #4569B4;
+
+                .eh-message-tip {
+                    position: absolute;
+                    width: 36px;
+                    height: 21px;
+                    line-height: 21px;
+                    right: -11px;
+                    top: -7px;
+                    color: #fff;
+                    cursor: pointer;
+                    background: url(../../../images/message-tip.png) no-repeat center center;
+                    background-size: 100%;
+                }
+
+            }
+
+            .eh-invitor-info {
+                margin-top: 10px;
+
+                .eh-invitor-info-name {
+                    @extend .eh-dot-class;
+                    margin: 5px;
+                    font-size: $fontSize16;
+                    height: 21px;
+                    overflow: hidden;
+                }
+
+                .eh-invitor-info-career {
+                    margin-top: 3px;
+                    font-size: $fontSize12;
+                    color: $lightFontColor;
+                    height: 14px;
+                    overflow: hidden;
+                }
+
+            }
+
+            .eh-invitor-company-info {
+                display: block;
+                margin: 8px 5px 0;
+                font-size: $fontSize12;
+                color: $colorBlueLight;
+                height: 29px;
+                overflow: hidden;
+
+                &:hover {
+                    color: $colorBlueLightHover;
+                }
+
+            }
+
+            .eh-opt-btns {
+                margin-top: 18px;
+
+                .eh-btn-ignore {
+                    margin-left: 12px;
+                }
+
+            }
+
+        }
+
+    }
+
+    .eh-view-more {
+        display: none;
+        margin: 17px 0 0;
+        text-align: center;
+        cursor: pointer;
+        color: $lightFontColor;
+
+        &:hover {
+            color: $fontColor;
+
+            .eh-point-arrow {
+                background-position: -303px 0;
+            }
+
+        }
+
+    }
+
+}
+
+// 选择类别样式
+.eh-overlay {
+    position: absolute;
+    background: #fff;
+    border: none;
+    border: solid 1px #dae2ed;
+    padding: 10px 0;
+
+    .eh-overlay-list {
+        .eh-overlay-item {
+            padding: 5px 15px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #F5F7FA;
+            }
+
+            &.active {
+                background-color: #F5F7FA;
+            }
+
+        }
+
+    }
+
+}
+
+.eh-list-no-result {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.eh-invitor-container {
+    margin-bottom: 10px;
+}
+
+.eh-connected-status {
+    display: inline-block;
+    height: 13px;
+    line-height: 13px;
+    padding-left: 20px;
+    background: url(../../../images/connect-marker.png) no-repeat left center;
+    color: $lighterFontColor;
+}
+
+.eh-connected-status {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 20px;
+    background: url(../../../images/connect-marker.png) no-repeat left center;
+    color: $lighterFontColor;
+}
+
+.eh-bo-exhibitions {
+    display: none;
+}
+
+// 自适应布局
+@media screen and (max-width:1100px) {
+    .eh-received-list .eh-received-item {
+        width: 33.3% !important;
+    }
+
+}
+
+.eh-no-content-show {
+    margin: 20px;
+}
+
+.eh-no-result {
+    text-align: center;
+    margin: 0 20px;
+
+    .eh-no-result-left {
+        display: inline-block;
+        width: 222px;
+        height: 222px;
+        vertical-align: middle;
+        background: url(../../../images/no-result.png) no-repeat center center;
+    }
+
+    .eh-no-result-right {
+        display: inline-block;
+        height: 222px;
+        line-height: 222px;
+        font-size: $fontSize22;
+        margin-left: 32px;
+    }
+
+    @media screen and (max-width:1155px) {
+        .eh-no-result-right {
+            height: 100px;
+            line-height: 100px;
+        }
+
+    }
+
+}
+
+.eh-no-result-gap {
+    margin-top: 65px;
+    height: 0;
+    border-top: solid 1px #999;
+    text-align: center;
+
+    .eh-middle-gap-content {
+        display: inline-block;
+        padding: 0 17px;
+        background: $bgColor;
+        font-size: $fontSize24;
+        position: relative;
+        height: 24px;
+        line-height: 24px;
+        top: -9px;
+        color: $lightFontColor;
+    }
+
+}
+
+.eh-info-item-left {
+    display: inline-block;
+    vertical-align: middle;
+    width: 130px;
+    color: #999;
+}

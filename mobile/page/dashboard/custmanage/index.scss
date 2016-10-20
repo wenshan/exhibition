@@ -1,0 +1,343 @@
+@import "../../../hotcss/px2rem.scss";
+@import "../../../common/css/common.scss";
+@import "../../../common/css/base.scss";
+@import "../../../common/components/zepto-modals/modals.scss";
+@import "../../../common/components/infinite-scroll/infinite-scroll.scss";
+@import "../inform/index.scss";
+@import "../../../common/components/go-top/index.scss";
+
+/*覆盖modal*/
+
+.remark-modal {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    background: #fff;
+    .modal-inner {
+        background: #fff;
+    }
+}
+
+
+/*覆盖modal*/
+
+body {
+    height: 100%;
+}
+
+.eh-m-tab {
+    width: px2rem(375);
+    height: px2rem(42);
+    font-size: px2rem(13);
+    line-height: px2rem(42);
+    text-align: center;
+    overflow: hidden;
+    .connect {
+        width: 49%;
+        height: px2rem(40);
+        float: left;
+        background: #fff;
+    }
+    .pedding {
+        width: 50%;
+        height: px2rem(40);
+        float: left;
+        position: relative;
+        background: #fff;
+    }
+    .line {
+        float: left;
+        display: inline-block;
+        width: 1px;
+    }
+    .red-point {
+        position: relative;
+        top: px2rem(-6);
+        left: px2rem(-5);
+    }
+    .active {
+        border-bottom: px2rem(2) solid #4569B4;
+        color: #4569B4;
+    }
+}
+
+.connect-list {
+    width: 100%;
+    padding-top: px2rem(12);
+}
+
+.connect-man {
+    width: px2rem(355);
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: px2rem(5);
+    margin-bottom: 8px;
+    overflow: hidden;
+    .man-up {
+        width: 100%;
+        height: px2rem(116);
+        overflow: hidden;
+        .man-photo {
+            width: px2rem(80);
+            height: px2rem(80);
+            float: left;
+            border: 1px solid #e0e0e0;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: px2rem(20);
+            margin-top: px2rem(20);
+            line-height: px2rem(80);
+            font-size: px2rem(50);
+            text-align: center;
+            background: #e0e0e0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .man-info-box {
+            float: left;
+            margin-top: px2rem(24);
+            margin-left: px2rem(12);
+            font-style: #666666;
+            position: relative;
+            .man-name {
+                font-size: px2rem(18);
+                line-height: px2rem(22);
+                color: #333333;
+                width: px2rem(234);
+                height: px2rem(22);
+                overflow: hidden;
+            }
+            .man-position {
+                font-size: px2rem(13);
+                line-height: px2rem(17);
+            }
+            .man-company {
+                width: px2rem(210);
+                height: px2rem(34);
+                overflow: hidden;
+                font-size: px2rem(13);
+                line-height: px2rem(17);
+                color: #999999;
+                margin-top: px2rem(4);
+            }
+        }
+    }
+    .man-down {
+        width: 100%;
+        height: px2rem(40);
+        overflow: hidden;
+        font-size: px2rem(14);
+        line-height: px2rem(40);
+        color: #666666;
+        text-align: center;
+        border-top: 1px dashed #e0e0e0;
+        .connect-button {
+            width: px2rem(176);
+            height: px2rem(40);
+            float: left;
+            font-size: px2rem(14);
+            line-height: px2rem(40);
+            text-align: center;
+        }
+        .accept-button {
+            background: #4569B4;
+            color: #fff;
+        }
+        .ignore-button {
+            float: right;
+            border: 1px solid #E0E0E0;
+        }
+    }
+}
+
+.connected-man {
+    .man-up {
+        position: relative;
+        height: px2rem(82);
+        .man-photo {
+            width: px2rem(50);
+            height: px2rem(50);
+            line-height: px2rem(50);
+            font-size: px2rem(40);
+            background: #e0e0e0;
+        }
+        .man-more-info {
+            color: #A5B7D7;
+            position: absolute;
+            right: px2rem(17);
+            top: px2rem(30);
+            font-size: px2rem(24);
+        }
+    }
+    .man-middle {
+        color: #666666;
+        background: #f5f5f5;
+        padding-top: px2rem(9);
+        padding-bottom: px2rem(9);
+        display: none;
+        .man-company {
+            font-size: px2rem(15);
+            line-height: px2rem(19);
+            margin-bottom: px2rem(8);
+            padding-left: px2rem(18);
+        }
+        .info-title {
+            font-size: px2rem(13);
+            line-height: px2rem(18);
+            color: #999999;
+            margin-bottom: px2rem(4);
+            padding-left: px2rem(18);
+        }
+        .info-detail {
+            font-size: px2rem(13);
+            line-height: px2rem(17);
+            padding-left: px2rem(18);
+            padding-bottom: px2rem(8);
+            border-bottom: px2rem(1) dashed #E0E0E0;
+        }
+        .remark-title {
+            margin-top: px2rem(8);
+            .remark-icon {
+                display: inline-block;
+                width: px2rem(15);
+                height: px2rem(15);
+                background: url(../../../images/input-icon.png);
+                background-size: 100%;
+                position: relative;
+                top: px2rem(2);
+                left: px2rem(3);
+            }
+        }
+        .remark-detail {
+            font-size: px2rem(13);
+            line-height: px2rem(17);
+            padding-left: px2rem(18);
+            padding-right: px2rem(18);
+        }
+    }
+    .man-down {
+        .inform-button {
+            font-size: px2rem(14);
+            text-align: center;
+            background: #4569B4;
+            color: #fff;
+            line-height: px2rem(36);
+        }
+    }
+}
+
+.line {
+    display: inline-block;
+    height: px2rem(42);
+    width: px2rem(1);
+    border-left: 1px solid #E0E0E0;
+}
+
+.red-point {
+    display: none;
+    height: px2rem(8);
+    width: px2rem(8);
+    background: #FF7300;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.remark-input-box {
+    .remark-box-title {
+        height: px2rem(40);
+        overflow: hidden;
+        border-bottom: 1px solid #e0e0e0;
+        line-height: px2rem(40);
+        position: relative;
+        font-size: px2rem(15);
+        color: #333333;
+        text-align: center;
+        .remark-cancel {
+            position: absolute;
+            left: px2rem(9);
+        }
+        .remark-done {
+            position: absolute;
+            right: px2rem(7);
+            color: #4569B4;
+        }
+        .remark-title {
+            font-size: px2rem(18);
+        }
+    }
+    .remark-textarea-wrap {
+        height: px2rem(220);
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+        .remark-textarea {
+            width: px2rem(330);
+            height: px2rem(180);
+            margin-top: px2rem(17);
+            font-size: px2rem(13);
+            color: #666666;
+            line-height: px2rem(17);
+        }
+    }
+    .remark-left-word {
+        text-align: right;
+        color: #999999;
+        padding-right: px2rem(9);
+        line-height: px2rem(30);
+        font-size: px2rem(12);
+        span {
+            color: #FF7300;
+        }
+    }
+}
+
+
+/*没有pendding的状态*/
+.custm-empty-bg {
+    background-image: url(../../../images/custm-empty-icon.png);
+}
+.eh-nopedding-box {
+    width: 100%;
+    height: px2rem(80);
+    font-size: px2rem(16);
+    line-height: px2rem(18);
+    margin: 0 auto;
+    margin-top: px2rem(38);
+    text-align: center;
+    .eh-nopedding-icon {
+        display: block;
+        width: px2rem(60);
+        height: px2rem(80);
+        position: relative;
+        margin: 0 auto;
+        @extend .custm-empty-bg;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+}
+.eh-noconection-box {
+        width: 100%;
+        height: px2rem(200);
+        font-size: px2rem(16);
+        line-height: px2rem(18);
+        margin: 0 auto;
+        padding-top: px2rem(71);
+        text-align: center;
+        .eh-noconection-icon {
+            display: block;
+
+            width: px2rem(60);
+            height: px2rem(54);
+            position: relative;
+            margin: 0 auto;
+            @extend .custm-empty-bg;
+            background-position:  right center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+    }
+
+/*没有pendding的状态*/

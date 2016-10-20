@@ -1,0 +1,3 @@
+language=assets
+build.command=sh build.sh
+build.output=.target

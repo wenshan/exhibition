@@ -1,0 +1,91 @@
+
+@import "./common.scss";
+@import "./no-result.scss";
+$rightImgWidth: 360px;
+$leftImgWidth: 200px;
+$rightImgHeight: 250px;
+
+body
+{
+    background: #fff;
+}
+.eh-no-result {
+    text-align: center;
+    padding-top: 87px;
+    height: 187px;
+    background: #F6F8FA;
+    .eh-no-result-left {
+        display: inline-block;
+        width: 222px;
+        height: 222px;
+        vertical-align: middle;
+        background: url(../../images/no-result.png) no-repeat center center;
+    }
+    .error404
+    {
+        width: 353px;
+        height: 201px;
+        background-image: url(../../images/error404.png);
+    }
+    .error500
+    {
+        width: 361px;
+        height: 187px;
+        background-image: url(../../images/error500.png);
+    }
+    .error403
+    {
+        width: 235px;
+        height: 181px;
+        background-image: url(../../images/error403.png);
+    }
+    .error503
+    {
+        width: 183px;
+        height: 134px;
+        background-image: url(../../images/error503.png);
+    }
+    .eh-no-result-right {
+        display: inline-block;
+        text-align: left;
+        font-size: 18px;
+        margin-left: 32px;
+        .n404
+        {
+            font-size: 40px;
+            color: #333333;
+            font-weight: bold;
+        }
+        .back-to-home
+        {
+            font-size: 16px;
+            color: #999999;
+            display: inline-block;
+            max-width: 614px;
+        }
+    }
+    @media screen and (max-width:1155px) {
+        .eh-no-result-right {
+            height: 100px;
+            line-height: 100px;
+        }
+    }
+}
+
+.eh-no-result-gap {
+    margin-top: 65px;
+    height: 0;
+    border-top: solid 1px #999;
+    text-align: center;
+    .eh-middle-gap-content {
+        display: inline-block;
+        padding: 0 17px;
+        background: $bgColor;
+        font-size: $fontSize24;
+        position: relative;
+        height: 24px;
+        line-height: 24px;
+        top: -9px;
+        color: $lightFontColor;
+    }
+}

@@ -1,0 +1,231 @@
+@import "./common.scss";
+// 最顶部导航栏高度变量
+$headerFirstHeight: 75px;
+// 顶部导航栏通用样式
+.eh-common-inner-header {
+    padding: 0 30px;
+    max-width: $ehMaxWidth - 60;
+    min-width: $ehMinWidth;
+    height: 100%;
+    margin: 0 auto;
+}
+
+// 顶部第一条导航栏
+.eh-header {
+    width: 100%;
+    height: $headerFirstHeight;
+    line-height: $headerFirstHeight;
+    background: #373838;
+    .eh-user-name {
+        @extend .eh-dot-class;
+        display: inline-block;
+        max-width: 80px;
+        color: #fff;
+        vertical-align: middle;
+    }
+    .eh-header-inner {
+        @extend .eh-common-inner-header;
+        // 右边登陆/注册
+        .eh-login {
+            display: block;
+            position: absolute;
+            right: 10px;
+            color: lighten(#cc3, 10%);
+            font-size: $fontSize16;
+            .eh-login-link {
+                color: #fff;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        // 左边logo
+        .eh-header-logo {
+            display: block;
+            position: absolute;
+            left: 27px;
+            width: 141px;
+            height: $headerFirstHeight;
+            line-height: $headerFirstHeight;
+            background: url(../../images/logo.png) no-repeat center center;
+            background-size: auto 37px;
+        }
+        // 搜索区
+        $searchHeight: 43px;
+        .eh-header-search {
+            position: relative;
+            left: -35px;
+            top: 16px;
+            height: $searchHeight;
+            line-height: $searchHeight;
+            margin: 0 370px 0 250px;
+            padding-right: 40px;
+            border-bottom: solid 1px rgba(255,255,255,0.5);
+            // 输入框
+            .eh-search-inp {
+                border: none;
+                height: $searchHeight;
+                line-height: $searchHeight;
+                width: 100%;
+                background-color: transparent;
+                color: #fff;
+                font-size: 20px;
+            }
+            // 搜索按钮
+            $searchBbuttonSize: 31px;
+            .eh-search-btn {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                margin-top: -$searchBbuttonSize / 2;
+                right: 0;
+                display: block;
+                width: $searchBbuttonSize;
+                height: $searchBbuttonSize;
+                background: url(../../images/search-btn.png) no-repeat right center;
+                background-size: 100%;
+            }
+        }
+    }
+    .eh-right-top-info {
+        font-size: 0;
+        margin-right: 25px;
+        .eh-right-info-item {
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            .eh-right-link {
+                display: inline-block;
+                font-size: 12px;
+                color: #fff;
+                padding-right: 14px;
+                height: 32px;
+                line-height: 32px;
+                vertical-align: middle;
+                &:hover {
+                    color: #f5be2a;
+                    text-decoration: none;
+                }
+                &.eh-watch-list {
+                    background: url(../../images/header-heart-icon.png) no-repeat 0 6px;
+                    background-size: auto 20px;
+                    padding-left: 33px;
+                }
+                &.eh-watch-list:hover
+                {
+                    background-image: url(../../images/header-heart-icon-hover.png);
+                }
+                &.eh-message {
+                    background: url(../../images/header-message-icon.png) no-repeat 0 6px;
+                    background-size: auto 20px;
+                    padding-left: 33px;
+                }
+                &.eh-message:hover{
+                    background-image: url(../../images/header-message-icon-hover.png);
+                }
+                &.eh-user {
+                    padding-right: 0;
+                }
+                .eh-user-photo {
+                    display: inline-block;
+                    color: #1686CC;
+                    text-align: center;
+                    width: 34px;
+                    height: 34px;
+                    line-height: 34px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    background: $weightBgColor no-repeat center center;
+                    background-size: 100%;
+                    font-size: $fontSize16;
+                }
+            }
+        }
+        .eh-right-user-photo {
+            .eh-head-action-list {
+                position: absolute;
+                width: 162px;
+                height: 149px;
+                background: #fff;
+                box-shadow: 1px 1px 1px #999999;
+                right: 2px;
+                top: 59px;
+                z-index: 99;
+                list-style-type: none;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                text-align: center;
+                display: none;
+                .eh-sing-out-photo {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    background: #e0e0e0;
+                    background-size: 100%;
+                }
+                .eh-sing-out-name {
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #333333;
+                    margin-top: 10px;
+                    height: 42px;
+                    overflow: hidden;
+                }
+                .eh-head-sign-out-triggle {
+                    position: absolute;
+                    top: -8px;
+                    right: 30px;
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 8px solid #fff;
+                }
+                .sign-out {
+                    text-align: center;
+                    height: 14px;
+                    a {
+                        height: 14px;
+                        line-height: 20px;
+                        display: block;
+                        font-size: 12px;
+                    }
+                    .sign-out-icon {
+                        display: inline-block;
+                        width: 16px;
+                        height: 18px;
+                        background: url(../../images/sign-out-icon.png);
+                        position: relative;
+                        top: 5px;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            .eh-head-action-list-front {
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                .eh-sing-out-photo {
+                    color: #fff;
+                }
+                .eh-sing-out-name {
+                    color: #fff;
+                }
+                .eh-head-sign-out-triggle {
+                    border-bottom: 20px solid rgba(0, 0, 0, 0.8);;
+                }
+            }
+        }
+        .eh-right-user-photo:hover .eh-head-action-list {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .eh-header-search {
+        left: -65px !important;
+    }
+}

@@ -1,0 +1,229 @@
+@import "../../../hotcss/px2rem.scss";
+@import "../../../common/css/common.scss";
+@import "../../../common/css/base.scss";
+@import "../../../common/components/zepto-modals/modals.scss";
+@import "../../../common/components/zepto-calendar/calendar.scss";
+
+// 原有日历插件样式重置
+.toolbar-inner {
+    text-align: center;
+    position: relative;
+}
+
+.picker-calendar {
+    // height: px2rem(400);
+}
+
+.picker-calendar-month {
+    background: #fff;
+}
+
+.picker-calendar-month-picker {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: px2rem(-160);
+    width: px2rem(320);
+    max-width: px2rem(320);
+}
+
+.picker-calendar-month-picker a.icon-only {
+    display: inline-block;
+    width: px2rem(10);
+    height: px2rem(16);
+    line-height: px2rem(16);
+    vertical-align: middle;
+    background: no-repeat center;
+    float: none;
+    min-width: auto;
+
+    &.picker-calendar-prev-month {
+        background-image: url(./images/turn-left.png);
+        background-size: 100%;
+
+        .icon {
+            display: none;
+        }
+
+    }
+
+    &.picker-calendar-next-month {
+        background-image: url(./images/turn-right.png);
+        background-size: 100%;
+
+        .icon {
+            display: none;
+        }
+
+    }
+
+}
+
+.picker-calendar-month-picker .current-month-value {
+    display: inline-block;
+    padding: 0 px2rem(13);
+    font-size: px2rem(14);
+    vertical-align: middle;
+    float: none;
+}
+
+.picker-calendar-year-picker {
+    display: none;
+}
+
+.picker-calendar-day {
+    font-size: px2rem(13);
+}
+
+.picker-calendar-week-days {
+    height: px2rem(35);
+    line-height: px2rem(35);
+    font-size: px2rem(12);
+    background-color: transparent;
+    border: none;
+    color: #666666;
+
+    .picker-calendar-week-day {
+        line-height: px2rem(35);
+        font-size: px2rem(13);
+    }
+
+}
+
+.picker-modal.picker-modal-inline .toolbar:after {
+    background-color: transparent;
+}
+
+.picker-calendar-day span {
+    width: px2rem(35);
+    height: px2rem(35);
+    height: px2rem(35);
+
+    .eh-date-day {
+        display: inline-block;
+        margin-top: px2rem(5);
+        font-size: px2rem(12);
+        line-height: px2rem(12);
+        height: px2rem(12);
+    }
+
+    .eh-has-date {
+        display: none;
+        width: px2rem(7);
+        height: px2rem(7);
+        line-height: px2rem(7);
+        background: #D8D8D8;
+        border-radius: 100%;
+        position: relative;
+        left: px2rem((35-7)/2);
+        top: px2rem(-8);
+    }
+
+}
+
+// 页面样式
+.eh-list {
+    margin-top: px2rem(18);
+
+    .eh-item {
+        background: #fff;
+        padding-top: px2rem(8);
+        padding-bottom: px2rem(22);
+        border-top: solid 1px #D8D8D8;
+        border-bottom: solid 1px #D8D8D8;
+        margin-bottom: px2rem(10);
+
+        .eh-date {
+            font-size: px2rem(14);
+            margin: 0 0 0 px2rem(15);
+        }
+
+        .eh-title {
+            margin: px2rem(5) px2rem(15) 0;
+            font-size: px2rem(16);
+            color: #333;
+        }
+
+        .eh-info-item {
+            margin: 0 px2rem(15) 0;
+            @extend .eh-dot-class;
+
+            &:first-child {
+                margin-top: px2rem(9);
+            }
+
+            .eh-left-title {
+                font-size: px2rem(12);
+                color: #999;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .eh-content {
+                font-size: px2rem(12);
+                color: #666;
+                display: inline-block;
+                vertical-align: middle;
+
+                &.eh-location {
+                    display: inline-block;
+                    padding-left: px2rem(15);
+                    height: px2rem(16);
+                    line-height: px2rem(16);
+                    background: url(./images/location.png) no-repeat left center;
+                    background-size: px2rem(13) px2rem(16);
+                }
+
+            }
+
+        }
+
+        .eh-pics {
+            margin: px2rem(9) px2rem(15) 0;
+            font-size: 0;
+
+            .eh-pics-item {
+                font-size: px2rem(14);
+                display: inline-block;
+                width: 33%;
+
+                .eh-pics-item-inner {
+                    margin-right: px2rem(3);
+                    height: px2rem(72);
+                    background: url(./images/pic-example.png) no-repeat center;
+                    background-size: 100%;
+                }
+
+            }
+
+        }
+
+        .eh-view-more {
+            display: inline-block;
+            width: px2rem(78);
+            height: px2rem(24);
+            line-height: px2rem(24);
+            border: solid 1px #D0D0D0;
+            border-radius: px2rem(4);
+            font-size: px2rem(12);
+            text-align: center;
+            margin-top: px2rem(21);
+            margin-left: px2rem(18);
+            color: #333;
+        }
+
+    }
+
+}
+
+.eh-list-no-res {
+    font-size: px2rem(16);
+    color: #333;
+    text-align: center;
+    padding: px2rem(40) 0 !important;
+}
+
+.eh-detail {
+    margin-top: px2rem(90);
+    margin-bottom: px2rem(50);
+}

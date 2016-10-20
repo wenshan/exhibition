@@ -1,0 +1,61 @@
+@import "./common.scss";
+
+.eh-header {
+    font-size: px2rem(14);
+    height: $headerHeight;
+    line-height: $headerHeight;
+    background: $headerBgColor;
+    display: table;
+    width: 100%;
+
+    .eh-header-filter {
+        display: table-cell;
+        text-align: center;
+        padding: 0 px2rem(6);
+
+        .eh-header-filter-marker {
+            display: inline-block;
+            width: px2rem(21);
+            height: px2rem(17);
+            background: url("//img.alicdn.com/tps/TB1B3SbMXXXXXcdXXXXXXXXXXXX-105-80.png") no-repeat center center;
+            background-size: 100% 100%;
+            vertical-align: middle;
+        }
+
+    }
+
+    .eh-header-search {
+        display: table-cell;
+        position: relative;
+        text-align: center;
+        padding: 0 px2rem(15);
+
+        .eh-search-inp {
+            font-size: 0.7rem;
+            color: #fff;
+            height: px2rem(32);
+            line-height: px2rem(32);
+            border: none;
+            border-bottom: solid 1px #fff;
+            background-color: transparent;
+            width: 100%;
+            position: relative;
+            top: px2rem(-4);
+            vertical-align: middle;
+        }
+
+        .eh-search-btn {
+            display: inline-block;
+            width: px2rem(30);
+            height: px2rem(30);
+            background: url("//img.alicdn.com/tps/TB1Ebl3MXXXXXclXFXXXXXXXXXX-165-165.png") no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            right: px2rem(13);
+            top: 50%;
+            margin-top: px2rem(-20);
+            vertical-align: middle;
+        }
+
+    }
+}

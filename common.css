@@ -1,0 +1,8 @@
+/*
+ * 如果不写任何依赖代码，该文件将会自动计算 common 依赖
+ * 如果手动写了依赖代码，该文件将会以指定的 common 依赖为准
+ * 依赖写法 @import "xxxxx";
+ *
+ */
+
+@import "alpha-apollo/apollo";
